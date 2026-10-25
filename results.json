@@ -1,0 +1,260 @@
+{
+  "repository": "mochajs/mocha",
+  "issue": 1893,
+  "base": "cb21a4eba550da665fb2c3fa1ce021777a191e23",
+  "sourceFiles": [
+    {
+      "path": "lib/reporters/html.js",
+      "sha256": "c181013610f578b531c0d0d1939928dc1f7df8aeb99e5b7493c3b12e2067d921",
+      "bytes": 12669
+    },
+    {
+      "path": "test/browser/html-reporter.spec.js",
+      "sha256": "0b77df6cfd85c082b4af1b9dac4693db655f5911b0782b21e8400b836150e6dc",
+      "bytes": 3105
+    }
+  ],
+  "requiredEntrypoint": {
+    "name": "candidate-fresh-npm-test",
+    "tree": "candidate",
+    "node": "v22.23.4",
+    "command": [
+      "npm",
+      "test"
+    ],
+    "code": 0,
+    "seconds": 155.32
+  },
+  "individualGates": {
+    "versions": {
+      "node": "v22.18.0",
+      "npm": "11.20.0"
+    },
+    "uid": 1000,
+    "results": [
+      {
+        "name": "candidate-full-format",
+        "command": [
+          "npm",
+          "run",
+          "format:check"
+        ],
+        "code": 0,
+        "seconds": 2.76
+      },
+      {
+        "name": "candidate-full-lint",
+        "command": [
+          "npm",
+          "run",
+          "lint"
+        ],
+        "code": 0,
+        "seconds": 10.34
+      },
+      {
+        "name": "candidate-full-node",
+        "command": [
+          "npm",
+          "run",
+          "test-node"
+        ],
+        "code": 0,
+        "seconds": 109.85
+      },
+      {
+        "name": "candidate-full-browser",
+        "command": [
+          "npm",
+          "run",
+          "test-browser"
+        ],
+        "code": 1,
+        "seconds": 9.13
+      },
+      {
+        "name": "candidate-full-tsc",
+        "command": [
+          "npm",
+          "run",
+          "tsc"
+        ],
+        "code": 0,
+        "seconds": 1.83
+      },
+      {
+        "name": "candidate-full-smoke",
+        "command": [
+          "npm",
+          "run",
+          "test-smoke"
+        ],
+        "code": 0,
+        "seconds": 0.17
+      }
+    ]
+  },
+  "officialBrowserRootRetry": {
+    "command": [
+      "npm",
+      "run",
+      "test-browser"
+    ],
+    "uid": 0,
+    "code": 0,
+    "seconds": 8.86,
+    "reason": "Official Playwright --with-deps lifecycle needs apt root; preceding ordinary-user attempt failed only at su authentication. No checks skipped."
+  },
+  "smokeMatrix": [
+    {
+      "requestedNode": "20.19.0",
+      "node": "v20.19.0",
+      "command": [
+        "npm",
+        "run",
+        "test-smoke"
+      ],
+      "code": 0,
+      "seconds": 0.16
+    },
+    {
+      "requestedNode": "20",
+      "node": "v20.20.2",
+      "command": [
+        "npm",
+        "run",
+        "test-smoke"
+      ],
+      "code": 0,
+      "seconds": 0.18
+    },
+    {
+      "requestedNode": "22.12.0",
+      "node": "v22.12.0",
+      "command": [
+        "npm",
+        "run",
+        "test-smoke"
+      ],
+      "code": 0,
+      "seconds": 0.73
+    },
+    {
+      "requestedNode": "22",
+      "node": "v22.23.4",
+      "command": [
+        "npm",
+        "run",
+        "test-smoke"
+      ],
+      "code": 0,
+      "seconds": 0.2
+    },
+    {
+      "requestedNode": "24",
+      "node": "v24.22.1",
+      "command": [
+        "npm",
+        "run",
+        "test-smoke"
+      ],
+      "code": 0,
+      "seconds": 0.16
+    },
+    {
+      "requestedNode": "26",
+      "node": "v26.12.1",
+      "command": [
+        "npm",
+        "run",
+        "test-smoke"
+      ],
+      "code": 0,
+      "seconds": 0.69
+    }
+  ],
+  "regression": {
+    "baseline": {
+      "passed": 2,
+      "failed": 6,
+      "result": {
+        "command": [
+          "node",
+          "node_modules/@playwright/test/cli.js",
+          "test",
+          "test/browser/html-reporter.spec.js",
+          "--retries=0"
+        ],
+        "code": 1,
+        "seconds": 32.45,
+        "baselineHtmlSha256": "5da554bbb0983f761914aa8f8f7d8b82ce45d6a1e58bdb9c63ad5ebdc1d3785f",
+        "testSha256": "0b77df6cfd85c082b4af1b9dac4693db655f5911b0782b21e8400b836150e6dc",
+        "bundleSha256": "f173ce6aa6006d148af185967c6f800d49e42f563ccb653ee6b181e82eafaa33"
+      }
+    },
+    "candidate": {
+      "targetedPassed": 8,
+      "fullBrowserPassed": 12,
+      "logs": [
+        "candidate-browser-regression.log",
+        "candidate-fresh-npm-test.log"
+      ]
+    },
+    "originalIssueFixture": {
+      "baseline": "baseline-diagnostic-browser-repro.json",
+      "candidate": "candidate-browser-repro.json",
+      "unchangedOriginalUtf16": true
+    }
+  },
+  "knownBaselineEnvironmentFailure": {
+    "check": "npm run lint:knip-docs with warm Knip cache",
+    "failure": "Unused files: src/content.config.ts",
+    "baselineFirstRun": {
+      "name": "baseline-docs-knip-node2218-root",
+      "tree": "baseline",
+      "node": "v22.18.0",
+      "command": [
+        "npm",
+        "run",
+        "lint:knip-docs"
+      ],
+      "uid": 0,
+      "code": 0,
+      "seconds": 2.8
+    },
+    "baselineRepeat": {
+      "name": "baseline-docs-knip-repeat",
+      "tree": "baseline",
+      "node": "v22.18.0",
+      "command": [
+        "npm",
+        "run",
+        "lint:knip-docs"
+      ],
+      "code": 1,
+      "seconds": 4.86
+    },
+    "candidateFreshDocsCiThenDirectNpmTest": {
+      "name": "candidate-fresh-npm-test",
+      "tree": "candidate",
+      "node": "v22.23.4",
+      "command": [
+        "npm",
+        "test"
+      ],
+      "code": 0,
+      "seconds": 155.32
+    },
+    "sourceOrConfigurationChanged": false,
+    "cacheDisabled": false
+  },
+  "candidate": "0c2fb3ac5fd648afc3f272490af2d6cc0238c5cf",
+  "sourceBranch": "fix/html-lone-surrogate-replay",
+  "review": "Generated with Codex; root and a separate Codex agent independently inspected correctness, URI/regex round-trip, security scope and project conventions. No human-review action is claimed.",
+  "boundaries": [
+    "No paid or external API calls.",
+    "Complete local npm test passed; full hosted Ubuntu/Windows matrix can run only after PR creation.",
+    "Earlier ordinary-user Playwright su failure and paired warm Knip cache failure are retained, not hidden.",
+    "CLA has not been signed by an agent."
+  ]
+}

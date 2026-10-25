@@ -1,0 +1,26 @@
+node=v22.12.0
+command=["npm", "run", "test-smoke"]
+
+> mocha@12.0.3 test-smoke
+> node ./bin/mocha.js --no-config test/smoke/smoke.spec.cjs
+
+(node:9096) ExperimentalWarning: CommonJS module /tmp/mocha1893/candidate/lib/cli/options.cjs is loading ES Module /tmp/mocha1893/candidate/lib/cli/parse-args.js using require().
+Support for loading ES Module in require() is an experimental feature and might change at any time
+    at require (node:internal/modules/helpers:138:16)
+    at Object.<anonymous> (/tmp/mocha1893/candidate/lib/cli/options.cjs:12:28)
+    at Module._compile (node:internal/modules/cjs/loader:1565:14)
+    at Object..js (node:internal/modules/cjs/loader:1708:10)
+    at Module.load (node:internal/modules/cjs/loader:1318:32)
+    at Function._load (node:internal/modules/cjs/loader:1128:12)
+    at TracingChannel.traceSync (node:diagnostics_channel:322:14)
+    at wrapModuleLoad (node:internal/modules/cjs/loader:219:24)
+    at cjsLoader (node:internal/modules/esm/translators:263:5)
+    at ModuleWrap.<anonymous> (node:internal/modules/esm/translators:196:7)
+
+
+  a production installation of Mocha
+    [32m✔[39m should be able to execute a test
+
+
+  1 passing (2ms)
+

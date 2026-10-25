@@ -1,0 +1,8 @@
+cwd=/tmp/mocha1893/candidate
+uid=1000
+versions={"node": "v22.18.0", "npm": "11.20.0"}
+command=["npm", "run", "tsc"]
+
+> mocha@12.0.3 tsc
+> tsc
+

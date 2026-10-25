@@ -1,0 +1,15 @@
+cwd=/tmp/mocha1893/candidate/docs
+node=v22.23.4
+command=["npm", "ci", "--ignore-scripts"]
+
+added 462 packages, and audited 463 packages in 5s
+
+221 packages are looking for funding
+  run `npm fund` for details
+
+22 vulnerabilities (1 low, 11 moderate, 10 high)
+
+To address all issues, run:
+  npm audit fix
+
+Run `npm audit` for details.

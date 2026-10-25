@@ -1,0 +1,11 @@
+{
+  "command": [
+    "npm",
+    "run",
+    "test-browser"
+  ],
+  "uid": 0,
+  "code": 0,
+  "seconds": 8.86,
+  "reason": "Official Playwright --with-deps lifecycle needs apt root; preceding ordinary-user attempt failed only at su authentication. No checks skipped."
+}

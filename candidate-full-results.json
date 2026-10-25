@@ -1,0 +1,69 @@
+{
+  "versions": {
+    "node": "v22.18.0",
+    "npm": "11.20.0"
+  },
+  "uid": 1000,
+  "results": [
+    {
+      "name": "candidate-full-format",
+      "command": [
+        "npm",
+        "run",
+        "format:check"
+      ],
+      "code": 0,
+      "seconds": 2.76
+    },
+    {
+      "name": "candidate-full-lint",
+      "command": [
+        "npm",
+        "run",
+        "lint"
+      ],
+      "code": 0,
+      "seconds": 10.34
+    },
+    {
+      "name": "candidate-full-node",
+      "command": [
+        "npm",
+        "run",
+        "test-node"
+      ],
+      "code": 0,
+      "seconds": 109.85
+    },
+    {
+      "name": "candidate-full-browser",
+      "command": [
+        "npm",
+        "run",
+        "test-browser"
+      ],
+      "code": 1,
+      "seconds": 9.13
+    },
+    {
+      "name": "candidate-full-tsc",
+      "command": [
+        "npm",
+        "run",
+        "tsc"
+      ],
+      "code": 0,
+      "seconds": 1.83
+    },
+    {
+      "name": "candidate-full-smoke",
+      "command": [
+        "npm",
+        "run",
+        "test-smoke"
+      ],
+      "code": 0,
+      "seconds": 0.17
+    }
+  ]
+}

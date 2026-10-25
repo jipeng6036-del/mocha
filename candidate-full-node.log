@@ -1,0 +1,3889 @@
+cwd=/tmp/mocha1893/candidate
+uid=1000
+versions={"node": "v22.18.0", "npm": "11.20.0"}
+command=["npm", "run", "test-node"]
+
+> mocha@12.0.3 test-node
+> run-s test-coverage-clean test-node:* test-coverage-generate
+
+
+> mocha@12.0.3 test-coverage-clean
+> rimraf .nyc_output coverage
+
+
+> mocha@12.0.3 test-node:integration
+> run-s clean build && npm run -s test-node-run -- --parallel --timeout 10000 --slow 3750 "test/integration/**/*.spec.cjs"
+
+
+> mocha@12.0.3 clean
+> rimraf mocha.js mocha.js.map
+
+
+> mocha@12.0.3 build
+> rollup -c ./rollup.config.js
+
+[36m
+[1m./browser-entry.js[22m → [1m./mocha.js[22m...[39m
+[1m[33m(!) Module "lib/context.js" tried to import "package.json" with "type": "json" attributes, but it was already imported elsewhere with no attributes. Please ensure that import attributes for the same module are always consistent.[39m[22m
+[32mcreated [1m./mocha.js[22m in [1m598ms[22m[39m
+Browserslist: browsers data (caniuse-lite) is 9 months old. Please run:
+  npx update-browserslist-db@latest
+  Why you should do it regularly: https://github.com/browserslist/update-db#readme
+Browserslist: browsers data (caniuse-lite) is 9 months old. Please run:
+  npx update-browserslist-db@latest
+  Why you should do it regularly: https://github.com/browserslist/update-db#readme
+
+Browserslist: browsers data (caniuse-lite) is 9 months old. Please run:
+  npx update-browserslist-db@latest
+  Why you should do it regularly: https://github.com/browserslist/update-db#readme
+Browserslist: browsers data (caniuse-lite) is 9 months old. Please run:
+  npx update-browserslist-db@latest
+  Why you should do it regularly: https://github.com/browserslist/update-db#readme
+Browserslist: browsers data (caniuse-lite) is 9 months old. Please run:
+  npx update-browserslist-db@latest
+  Why you should do it regularly: https://github.com/browserslist/update-db#readme
+Browserslist: browsers data (caniuse-lite) is 9 months old. Please run:
+  npx update-browserslist-db@latest
+  Why you should do it regularly: https://github.com/browserslist/update-db#readme
+Browserslist: browsers data (caniuse-lite) is 9 months old. Please run:
+  npx update-browserslist-db@latest
+  Why you should do it regularly: https://github.com/browserslist/update-db#readme
+Browserslist: browsers data (caniuse-lite) is 9 months old. Please run:
+  npx update-browserslist-db@latest
+  Why you should do it regularly: https://github.com/browserslist/update-db#readme
+Browserslist: browsers data (caniuse-lite) is 9 months old. Please run:
+  npx update-browserslist-db@latest
+  Why you should do it regularly: https://github.com/browserslist/update-db#readme
+Browserslist: browsers data (caniuse-lite) is 9 months old. Please run:
+  npx update-browserslist-db@latest
+  Why you should do it regularly: https://github.com/browserslist/update-db#readme
+Browserslist: browsers data (caniuse-lite) is 9 months old. Please run:
+  npx update-browserslist-db@latest
+  Why you should do it regularly: https://github.com/browserslist/update-db#readme
+Browserslist: browsers data (caniuse-lite) is 9 months old. Please run:
+  npx update-browserslist-db@latest
+  Why you should do it regularly: https://github.com/browserslist/update-db#readme
+Browserslist: browsers data (caniuse-lite) is 9 months old. Please run:
+  npx update-browserslist-db@latest
+  Why you should do it regularly: https://github.com/browserslist/update-db#readme
+Browserslist: browsers data (caniuse-lite) is 9 months old. Please run:
+  npx update-browserslist-db@latest
+  Why you should do it regularly: https://github.com/browserslist/update-db#readme
+Browserslist: browsers data (caniuse-lite) is 9 months old. Please run:
+  npx update-browserslist-db@latest
+  Why you should do it regularly: https://github.com/browserslist/update-db#readme
+Browserslist: browsers data (caniuse-lite) is 9 months old. Please run:
+  npx update-browserslist-db@latest
+  Why you should do it regularly: https://github.com/browserslist/update-db#readme
+Browserslist: browsers data (caniuse-lite) is 9 months old. Please run:
+  npx update-browserslist-db@latest
+  Why you should do it regularly: https://github.com/browserslist/update-db#readme
+Browserslist: browsers data (caniuse-lite) is 9 months old. Please run:
+  npx update-browserslist-db@latest
+  Why you should do it regularly: https://github.com/browserslist/update-db#readme
+Browserslist: browsers data (caniuse-lite) is 9 months old. Please run:
+  npx update-browserslist-db@latest
+  Why you should do it regularly: https://github.com/browserslist/update-db#readme
+
+  file utils
+    lookupFiles()
+      [32m✔[39m should not return broken symlink file path
+      [32m✔[39m should accept a glob "path" value
+      when given `extension` option
+        when provided a directory for the filepath
+          when `extension` option has leading dot
+            [32m✔[39m should find the file w/ the extension
+          when `extension` option has no leading dot
+            [32m✔[39m should find the file w/ the extension
+          when directory contains file without multipart extension
+            when provided multipart `extension` option
+              when `extension` option has no leading dot
+                [32m✔[39m should not match the filepath
+              when `extension` option has a leading dot
+                [32m✔[39m should not match the filepath
+          when directory contains matching file having a multipart extension
+            when provided multipart `extension` option
+              when `extension` option has no leading dot
+                [32m✔[39m should find the matching file
+              when `extension` option has a leading dot
+                [32m✔[39m should find the matching file
+      when provided a filepath with no extension
+        when `extension` option has a leading dot
+          when only provided a single extension
+            [32m✔[39m should append provided extensions and find only the matching file
+          when provided multiple extensions
+            [32m✔[39m should append provided extensions and find all matching files
+        when `extension` option has no leading dot
+          when only provided a single extension
+            [32m✔[39m should append provided extensions and find only the matching file
+          when provided multiple extensions
+            [32m✔[39m should append provided extensions and find all matching files
+        when `extension` option is multipart
+          when `extension` option has no leading dot
+            [32m✔[39m should append provided extension and find only the matching file
+          when `extension` option has leading dot
+            [32m✔[39m should append provided extension and find only the matching file
+      when no files match
+        [32m✔[39m should throw an exception
+      when looking up a directory and no extensions provided
+        [32m✔[39m should throw
+
+Browserslist: browsers data (caniuse-lite) is 9 months old. Please run:
+  npx update-browserslist-db@latest
+  Why you should do it regularly: https://github.com/browserslist/update-db#readme
+Browserslist: browsers data (caniuse-lite) is 9 months old. Please run:
+  npx update-browserslist-db@latest
+  Why you should do it regularly: https://github.com/browserslist/update-db#readme
+Browserslist: browsers data (caniuse-lite) is 9 months old. Please run:
+  npx update-browserslist-db@latest
+  Why you should do it regularly: https://github.com/browserslist/update-db#readme
+
+  config
+    [32m✔[39m should return the same values for all supported config types
+    when configuring Mocha via a ".js" file
+      [32m✔[39m should load configuration given absolute path
+      [32m✔[39m should load configuration given cwd-relative path
+      [32m✔[39m should rethrow error from absolute path configuration
+      [32m✔[39m should rethrow error from cwd-relative path configuration
+      when path is neither absolute or relative
+        [32m✔[39m should load configuration given module-relative path
+
+Browserslist: browsers data (caniuse-lite) is 9 months old. Please run:
+  npx update-browserslist-db@latest
+  Why you should do it regularly: https://github.com/browserslist/update-db#readme
+Browserslist: browsers data (caniuse-lite) is 9 months old. Please run:
+  npx update-browserslist-db@latest
+  Why you should do it regularly: https://github.com/browserslist/update-db#readme
+
+  common js require
+    [32m✔[39m should be able to run a test where all mocha exports are used
+
+
+  invalid arguments
+    when argument is missing required value
+      [32m✔[39m should exit with failure
+
+
+  globbing like --compilers
+    [32m✔[39m should find a file of each type
+
+
+  diffs
+    [32m✔[39m should display a diff for small strings
+    [32m✔[39m should display a diff of canonicalized objects
+    [32m✔[39m should display a diff for medium strings
+    [32m✔[39m should display a diff for entire object dumps
+    [32m✔[39m should display a diff for multi-line strings
+    [32m✔[39m should display a diff for entire object dumps
+    [32m✔[39m should display a full-comparison with escaped special characters
+    [32m✔[39m should display a word diff for large strings
+    [32m✔[39m should work with objects
+    [32m✔[39m should show value diffs and not be affected by commas
+    [32m✔[39m should display diff by data and not like an objects
+
+
+  mocha binary
+    [32m✔[39m should not output colors to pipe
+
+
+  global "mocha" object
+    [32m✔[39m exposes the runner name and version
+    [32m✔[39m is writable and configurable so other code can overwrite it
+    [32m✔[39m logs via debug instead of throwing when globalThis.mocha is already non-configurable
+
+
+  no-diff
+    when enabled
+      [32m✔[39m should not display a diff
+    when disabled
+      [32m✔[39m should display a diff
+
+
+  hooks
+    [32m✔[39m are ran in correct order
+    [32m✔[39m current test title of all hooks
+
+
+  support CJS require.extension compilers with esm syntax
+    [32m✔[39m should support .js extension
+    [32m✔[39m should support .ts extension
+
+
+  when non-array argument is provided multiple times
+    when the same argument name is used
+      [32m✔[39m should prefer the last value
+    when a different argument name is used
+      [32m✔[39m should prefer the last value
+
+
+  --fail-zero
+    [32m✔[39m should fail since no tests are encountered
+
+
+  --async-only
+    [32m✔[39m should fail synchronous specs
+    [32m✔[39m should allow asynchronous specs
+
+
+  --allow-uncaught
+    [32m✔[39m should throw an uncaught error and exit process
+    [32m✔[39m should run with conditional `this.skip()` (2064ms)
+
+
+  .only()
+    bdd
+      [32m✔[39m should run only tests that marked as `only`
+    tdd
+      [32m✔[39m should run only tests that marked as `only`
+    qunit
+      [32m✔[39m should run only tests that marked as `only`
+
+
+  multiple runs
+    [32m✔[39m should be allowed to run multiple times if cleanReferences is turned off
+    [32m✔[39m should not be allowed if cleanReferences is true
+    [32m✔[39m should not be allowed if the instance is disposed
+    [32m✔[39m should not be allowed to run while a previous run is in progress
+    [32m✔[39m should reset the hooks between runs
+
+
+  --invert
+    when used without --fgrep or --grep
+      [32m✔[39m it should report an error
+
+
+  --dry-run
+    [32m✔[39m should only report, but not execute any test
+    [32m✔[39m should pass without "RangeError: maximum call stack size exceeded"
+
+
+  --extension
+    [32m✔[39m should allow comma-separated variables
+    [32m✔[39m should allow extensions beginning with a dot
+
+
+  support ESM module loader compilers
+    [32m✔[39m should support ESM .js extension
+    [32m✔[39m should support ESM .ts extension
+    [32m✔[39m should support ESM .mjs extension
+
+
+  support ESM only module loader packages
+    [32m✔[39m should support ESM .js extension (2049ms)
+    [32m✔[39m should support ESM .ts extension (2032ms)
+    [32m✔[39m should support ESM .mjs extension
+
+
+  FIFO support
+    [32m✔[39m should accept a test passed using process substitution when respawning (2906ms)
+    [32m✔[39m should accept a test passed as a FIFO (2123ms)
+
+
+  --list-interfaces
+    [32m✔[39m should dump a list of all interfaces with descriptions
+    [32m✔[39m should fail when combined with another one-and-done option
+
+
+  --delay
+    [32m✔[39m should run the generated test suite
+    [32m✔[39m should execute exclusive tests only
+    [32m✔[39m should throw an error if the test suite failed to run
+
+Warning: Cannot find any files matching pattern "/tmp/mocha1893/candidate/test/integration/fixtures/filethatdoesnotexist.js"
+
+  init command
+    [32m✔[39m should create some files in the dest dir
+    [32m✔[39m should create files when init follows a top-level option
+    [32m✔[39m should create files when init is respawned with a Node option (2225ms)
+    when no path is supplied
+      [32m✔[39m should fail
+      [32m✔[39m should not throw
+
+
+  --retries
+    [32m✔[39m should retry test failures after a certain threshold
+
+
+  --sort
+    [32m✔[39m should sort tests in alphabetical order
+
+
+  --list-reporters
+    [32m✔[39m should dump a list of all reporters with descriptions
+    [32m✔[39m should not dump reporters unavailable on the command line
+    [32m✔[39m should fail when combined with another one-and-done option
+
+
+  --reporter
+    [32m✔[39m should work for ESM
+
+
+  event order
+    trivial test case
+      [32m✔[39m should assert trivial event order (1965ms)
+    --bail test case
+      [32m✔[39m should assert --bail event order
+    --retries test case
+      [32m✔[39m should assert --retries event order
+    --delay test case
+      [32m✔[39m should assert --delay event order
+    --retries and --bail test case
+      [32m✔[39m should assert --retries event order
+
+
+  --jobs
+    when set to a number less than 2
+      [32m✔[39m should run tests in serial
+    when set to a number greater than 1
+      [32m✔[39m should run tests in parallel (2725ms)
+
+
+  --ignore
+    [32m✔[39m should ignore specific files
+    [32m✔[39m should ignore globbed files
+    [32m✔[39m should ignore multiple patterns
+
+
+  Enabled --pass-on-failing-test-suite
+    [32m✔[39m Test should finish with zero code with disabled option
+
+  Disabled --pass-on-failing-test-suite
+    [32m✔[39m Test should return non-zero code with enabled option
+
+
+  multiple calls to done()
+    from a spec
+      [32m✔[39m results in failure
+      [32m✔[39m throws a descriptive error
+    with error passed on second call
+      [32m✔[39m results in failure
+      [32m✔[39m should throw a descriptive error
+    with multiple specs
+      [32m✔[39m results in failure
+      [32m✔[39m correctly attributes the error
+    from a before hook
+      [32m✔[39m results in failure
+      [32m✔[39m correctly attributes the error
+    from a "before each" hook
+      [32m✔[39m results in a failure
+      [32m✔[39m correctly attributes the errors
+    when done() called asynchronously
+      [32m✔[39m results in error
+
+
+  package entrypoint
+    [32m✔[39m should resolve the package root without DEP0151 warnings
+    [32m✔[39m should resolve deep subpaths without a file extension
+    [32m✔[39m should resolve deep subpaths with a file extension
+
+Browserslist: browsers data (caniuse-lite) is 9 months old. Please run:
+  npx update-browserslist-db@latest
+  Why you should do it regularly: https://github.com/browserslist/update-db#readme
+Browserslist: browsers data (caniuse-lite) is 9 months old. Please run:
+  npx update-browserslist-db@latest
+  Why you should do it regularly: https://github.com/browserslist/update-db#readme
+
+  --grep
+    [32m✔[39m should run specs matching a string
+    should run specs matching a RegExp
+      [32m✔[39m with RegExp-like strings (pattern followed by flag)
+      [32m✔[39m with string as pattern
+    when used with --invert
+      [32m✔[39m should run specs that do not match the pattern
+    when both --fgrep and --grep used together
+      [32m✔[39m should report an error
+
+
+  repo tooling
+    [32m✔[39m issue-5663: line numbers are wrong in stack traces when running mocha self tests (2788ms)
+
+
+  --bail
+    [32m✔[39m should stop after the first error (1941ms)
+    [32m✔[39m should stop after the first error - async
+    [32m✔[39m should stop all tests after failing "before" hook
+    [32m✔[39m should stop all tests after failing "beforeEach" hook
+    [32m✔[39m should stop all tests after failing test
+    [32m✔[39m should stop all tests after failing "after" hook (1991ms)
+    [32m✔[39m should stop all tests after failing "afterEach" hook
+
+Browserslist: browsers data (caniuse-lite) is 9 months old. Please run:
+  npx update-browserslist-db@latest
+  Why you should do it regularly: https://github.com/browserslist/update-db#readme
+
+  globbing
+    by the shell
+      [32m✔[39m should find the first level test
+      [32m✔[39m should not find a non-matching pattern
+      [32m✔[39m should handle multiple non-matching patterns
+      [32m✔[39m should handle both matching and non-matching patterns in the same command
+    by Mocha
+      [32m✔[39m should find the first level test
+      [32m✔[39m should not find a non-matching pattern
+      [32m✔[39m should handle multiple non-matching patterns
+      [32m✔[39m should handle both matching and non-matching patterns in the same command
+      double-starred
+        [32m✔[39m should find the tests on multiple levels
+        [32m✔[39m should not find a non-matching pattern
+        [32m✔[39m should handle both matching and non-matching patterns in the same command
+
+
+  --file
+    [32m✔[39m should run tests passed via file first
+    [32m✔[39m should run multiple tests passed via file first
+    [32m✔[39m should support having no other test files
+    [32m✔[39m should run esm tests passed via file
+    [32m✔[39m should log a warning if a nonexistent file with an unknown extension is specified
+    [32m✔[39m should provide warning for nonexistent js file extensions (2157ms)
+    [32m✔[39m should provide warning for nonexistent esm file extensions
+
+
+  esm
+    [32m✔[39m should pass a passing esm test that uses esm (2054ms)
+    [32m✔[39m should fail a failing esm test that uses esm
+    [32m✔[39m should show file location when there is a syntax error in the test
+    [32m✔[39m should recognize esm files ending with .js due to package.json type flag
+    [32m✔[39m should enable requiring/loading a cjs module with "dir" as filename
+    [32m✔[39m should throw an ERR_MODULE_NOT_FOUND and not ERR_REQUIRE_ESM if file imports a non-existing module (3262ms)
+    [32m✔[39m should throw an ERR_MODULE_NOT_FOUND and not ERR_REQUIRE_ESM if file imports a non-existing module with a loader (4105ms)
+
+
+  --ui
+    [32m✔[39m should load interface and run it (2411ms)
+    [32m✔[39m should work if required and name added to Mocha's `interfaces` prop
+    [32m✔[39m should work for ESM (1896ms)
+    [32m✔[39m should work for ESM when imported via path
+
+
+  --forbid-only
+    [32m✔[39m should succeed if there are only passed tests
+    [32m✔[39m should fail if there are tests marked only
+    [32m✔[39m should fail if there are tests in suites marked only
+    [32m✔[39m should fail if there is empty suite marked only
+    [32m✔[39m should fail if there is suite marked only which matches grep
+    [32m✔[39m should fail if suite marked only does not match grep
+    [32m✔[39m should fail if suite marked only does not match inverted grep
+    [32m✔[39m should fail even if before has "skip"
+    [32m✔[39m should fail even if beforeEach has "skip"
+
+
+  --forbid-pending
+    [32m✔[39m should succeed if there are only passed tests
+    [32m✔[39m should fail if there are tests in suites marked skip
+    [32m✔[39m should fail if there is empty suite marked pending
+    [32m✔[39m should fail if there are tests marked skip (2240ms)
+    [32m✔[39m should fail if there are pending tests
+    [32m✔[39m should fail if tests call `skip()`
+    [32m✔[39m should fail if beforeEach calls `skip()`
+    [32m✔[39m should fail if before calls `skip()`
+
+
+  suite w/no callback
+    [32m✔[39m should throw a helpful error message when a callback for suite is not supplied
+
+  skipped suite w/no callback
+    [32m✔[39m should not throw an error when a callback for skipped suite is not supplied
+
+  skipped suite w/ callback
+    [32m✔[39m should not throw an error when a callback for skipped suite is supplied
+
+  suite returning a value
+    [32m✔[39m should not give a deprecation warning for suite callback returning a value
+
+
+  this.timeout()
+    [32m✔[39m is respected by sync and async suites
+    [32m✔[39m should allow overriding if disabled per-test
+
+  describe.timeout()
+    [32m✔[39m should fail due to suite-level timeout lower than elapsed time of inner test
+
+Debugger listening on ws://127.0.0.1:9229/aa2b0ac3-793b-4c94-9588-11a81aaa3c8d
+For help, see: https://nodejs.org/en/docs/inspector
+
+  retries
+    [32m✔[39m are ran in correct order (2043ms)
+    [32m✔[39m should exit early if test passes
+    [32m✔[39m should let test override
+    [32m✔[39m should not hang w/ async test
+
+
+  --reporter-option
+    when given options w/ invalid format
+      [32m✔[39m should display an error
+      [32m✔[39m should allow comma-separated values
+      [32m✔[39m should allow repeated options
+      [32m✔[39m should allow key-only boolean values (1996ms)
+      [32m✔[39m should allow the short alias
+      [32m✔[39m should allow the long alias
+      [32m✔[39m should allow the CLI to override clashing keys from the config file
+      [32m✔[39m should preserve package config reporter options after respawning with a Node option
+      [32m✔[39m should preserve package config reporter option objects after respawning with a Node option
+
+
+  reporters
+    markdown
+      [32m✔[39m does not exceed maximum callstack (issue: 1875)
+      [32m✔[39m contains spec src
+    xunit
+      [32m✔[39m prints test cases with --reporter-options output (issue: 1864)
+    loader
+      [32m✔[39m loads a reporter from a path relative to the current working directory
+      [32m✔[39m loads a reporter from an absolute path
+    tap
+      [32m✔[39m should fail if given invalid `tapVersion`
+      [32m✔[39m places exceptions correctly in YAML blocks
+      produces valid TAP v13 output
+        [32m✔[39m for passing.fixture.cjs
+        [32m✔[39m for reporters.fixture.js
+
+
+  node flags
+    [32m✔[39m should not consider argument values to be node flags
+
+  node flags using "--node-option"
+    [32m✔[39m should pass fake option to node and fail with node exception
+    [32m✔[39m should work with import hooks that break find-up resolution (3039ms)
+    [32m✔[39m should run TypeScript specs with --node-option import=tsx (7814ms)
+    [32m✔[39m should run TypeScript specs with node-option import=tsx from a config file
+
+Debugger listening on ws://127.0.0.1:9229/265b978e-114e-4d33-b3f8-4f4e80b46f0b
+For help, see: https://nodejs.org/en/docs/inspector
+
+  root hooks
+    when mocha run in serial mode
+      [32m✔[39m should run root hooks when provided via mochaHooks object export
+      [32m✔[39m should run root hooks when provided via mochaHooks function export
+      support ESM when type=module or .mjs extension
+        [32m✔[39m should run root hooks when provided via mochaHooks
+      support ESM via .js extension when type=commonjs
+        should work
+          [32m✔[39m with --no-experimental-detect-module (2742ms)
+          [32m✔[39m with --experimental-detect-module
+    when mocha in parallel mode
+      [32m✔[39m should run root hooks when provided via mochaHooks object exports
+      [32m✔[39m should run root hooks when provided via mochaHooks function export
+      when running multiple jobs
+        [32m✔[39m should run root hooks when provided via mochaHooks object exports for each job
+
+
+  --posix-exit-codes
+    when enabled
+      when mocha is run as a child process
+        [32m✔[39m should exit with correct POSIX shell code on SIGABRT (4248ms)
+        [32m✔[39m should exit with correct POSIX shell code on SIGTERM (2868ms)
+        [32m✔[39m should exit with the correct POSIX shell code on numeric fatal signal (2081ms)
+        [32m✔[39m should exit with code 1 if there are test failures (1953ms)
+      when mocha is run in-process
+        [32m✔[39m should exit with the correct POSIX shell code on SIGABRT (2014ms)
+        [32m✔[39m should exit with the correct POSIX shell code on SIGTERM
+        [32m✔[39m should exit with code 1 if there are test failures
+    when not enabled
+      when mocha is run as a child process
+        [32m✔[39m should exit with the number of failed tests
+      when mocha is run in-process
+        [32m✔[39m should exit with the number of failed tests
+
+
+  parallel run
+    [32m✔[39m should allow `import {it} from "mocha"` module syntax (2916ms)
+    [32m✔[39m should correctly set worker ids for each process (3563ms)
+    [32m✔[39m should correctly handle circular array references in an exception (2217ms)
+    [32m✔[39m should correctly handle an exception with retries
+    [32m✔[39m should correctly handle circular object references in an exception
+    [32m✔[39m should report the crashing spec file when a worker dies
+    [32m✔[39m should correctly handle a non-writable getter reference in an exception
+
+
+  --exit
+    default behavior
+      [32m✔[39m should not force exit after root suite completion (9580ms)
+    when enabled
+      [32m✔[39m should force exit after root suite completion (1601ms)
+    when disabled
+      [32m✔[39m should not force exit after root suite completion (9538ms)
+
+Debugger listening on ws://127.0.0.1:36819/be26c25d-abb9-44c3-8242-d2f520cef298
+For help, see: https://nodejs.org/en/docs/inspector
+
+  uncaught exceptions
+    [32m✔[39m handles uncaught exceptions from hooks
+    [32m✔[39m handles uncaught exceptions from async specs
+    [32m✔[39m handles uncaught exceptions from which Mocha cannot recover
+    [32m✔[39m handles uncaught exceptions within pending tests
+    [32m✔[39m handles uncaught exceptions within open tests
+    [32m✔[39m removes uncaught exceptions handlers correctly
+    [32m✔[39m handles uncaught exceptions after runner's end
+    [32m✔[39m issue-1327: should run the first test and then bail
+    [32m✔[39m issue-1417: uncaught exceptions from async specs
+    issue-4481: behavior of non-Mocha-originating unhandled rejections
+      when Node is in "warn" mode
+        [32m✔[39m should warn
+      when Node is in "strict" mode
+        [32m✔[39m should fail with an uncaught exception
+
+
+  pending
+    pending specs
+      [32m✔[39m should be created by omitting a function
+      [32m✔[39m should return the test object when used via shorthand methods (2068ms)
+      [32m✔[39m should keep hierarchies of suites
+    synchronous skip()
+      in spec
+        [32m✔[39m should immediately skip the spec and run all others
+      in after
+        [32m✔[39m should throw, but run all tests
+      in before
+        [32m✔[39m should skip all suite specs
+        [32m✔[39m should run before and after hooks
+        [32m✔[39m should skip all sync/async inner before/after hooks
+      in before with nested describe
+        [32m✔[39m should skip all suite specs, even if nested
+      in beforeEach
+        [32m✔[39m should skip all suite specs
+        [32m✔[39m should skip only two suite specs
+    asynchronous skip()
+      in spec
+        [32m✔[39m should immediately skip the spec and run all others
+      in before
+        [32m✔[39m should skip all suite specs
+        [32m✔[39m should run before and after hooks
+      in before with nested describe
+        [32m✔[39m should skip all suite specs, even if nested
+      in beforeEach
+        [32m✔[39m should skip all suite specs
+    programmatic usage
+      [32m✔[39m should skip the test by listening to test event
+
+Debugger listening on ws://127.0.0.1:35781/53e43ad9-59f6-4579-80c4-cea6956520b1
+For help, see: https://nodejs.org/en/docs/inspector
+
+  hook error handling
+    before hook error
+      [32m✔[39m should verify results
+    before hook error tip
+      [32m✔[39m should verify results
+    before hook root error
+      [32m✔[39m should verify results
+    before hook nested error
+      [32m✔[39m should verify results
+    before hook deepnested error
+      [32m✔[39m should verify results
+    before each hook error
+      [32m✔[39m should verify results
+    after hook error
+      [32m✔[39m should verify results
+    after hook nested error
+      [32m✔[39m should verify results
+    after hook deepnested error
+      [32m✔[39m should verify results
+    after each hook error
+      [32m✔[39m should verify results
+    multiple hook errors
+      [32m✔[39m should verify results
+    async - before hook error
+      [32m✔[39m should verify results
+    async - before hook error tip
+      [32m✔[39m should verify results
+    async - before each hook error
+      [32m✔[39m should verify results
+    async - after hook error
+      [32m✔[39m should verify results
+    async - after each hook error
+      [32m✔[39m should verify results
+    async - multiple hook errors
+      [32m✔[39m should verify results
+    "this.test.error()-style failure
+      [32m✔[39m should fail the associated test
+    --fail-hook-affected-tests
+      error in `before` hook
+        [32m✔[39m should fail all affected tests
+      error in `beforeEach` hook
+        [32m✔[39m should fail all affected tests
+      error in `beforeEach` hook with nested suites
+        [32m✔[39m should fail tests in nested suites
+      non-Error thrown in `before` hook
+        [32m✔[39m should handle null, undefined, and other non-Error values
+      non-Error thrown in `beforeEach` hook
+        [32m✔[39m should handle null, undefined, and other non-Error values
+
+
+  global setup/teardown
+    when mocha run in serial mode
+      [32m✔[39m should execute global setup and teardown (2296ms)
+      [32m✔[39m should share context
+      when only global teardown is supplied
+        [32m✔[39m should run global teardown
+      when only global setup is supplied
+        [32m✔[39m should run global setup
+      when supplied multiple functions
+        [32m✔[39m should execute them sequentially
+      when a global fixture throws
+        [32m✔[39m should handle when global teardown throws
+        [32m✔[39m should handle when global setup throws
+      when run in watch mode
+        [32m✔[39m should execute global setup and teardown
+        [32m✔[39m should not re-execute the global fixtures
+        when only global teardown is supplied
+          [32m✔[39m should run global teardown
+        when only global setup is supplied
+          [32m✔[39m should run global setup
+    when mocha run in parallel mode
+      [32m✔[39m should execute global setup and teardown
+      [32m✔[39m should share context
+      when supplied multiple functions
+        [32m✔[39m should execute them sequentially
+      when run in watch mode
+        [32m✔[39m should execute global setup and teardown
+        [32m✔[39m should not re-execute the global fixtures
+
+
+  regressions
+    [32m✔[39m issue-1991: Declarations do not get cleaned up unless you set them to `null` - Memory Leak (17229ms)
+    [32m✔[39m issue-2315: cannot read property currentRetry of undefined
+    [32m✔[39m issue-2406: should run nested describe.only suites
+    [32m✔[39m issue-2417: should not recurse infinitely with .only suites nested within each other
+    issue-2286: after doesn't execute if test was skipped in beforeEach
+      suite with skipped test for meta test
+        - should be pending
+
+Debugger listening on ws://127.0.0.1:36721/54b67c12-6984-448b-9b4e-bc2dfe09d623
+For help, see: https://nodejs.org/en/docs/inspector
+
+  --timeout
+    [32m✔[39m should allow human-readable string value (3133ms)
+    [32m✔[39m should allow numeric value (3137ms)
+    [32m✔[39m should allow multiple values (2983ms)
+    [32m✔[39m should disable timeout with "--inspect" (3131ms)
+    [32m✔[39m should disable timeout with "-n inspect" (2838ms)
+    [32m✔[39m should disable timeout with "-n inspect=0" (2890ms)
+    [32m✔[39m should disable timeout when the inspector is enabled via NODE_OPTIONS (2201ms)
+    [32m✔[39m should disable timeout when the inspector is opened without inspect flags (1995ms)
+    [32m✔[39m should complete tests having unref'd async behavior
+
+
+  --watch
+    when enabled
+      [32m✔[39m reruns test when watched test file is touched
+      [32m✔[39m reruns test when watched test file crashes
+      [32m✔[39m keeps watching when the last test file is removed
+      [32m✔[39m reruns test when file matching --watch-files changes
+      [32m✔[39m reruns test when file matching --watch-files is added
+      [32m✔[39m reruns test when file and directory paths under --watch-files are added (3193ms)
+      [32m✔[39m reruns test when file matching --watch-files is removed
+      [32m✔[39m reruns test when file matching exact --watch-files changes
+      [32m✔[39m reruns test when file under --watch-files changes
+      [32m✔[39m reruns test when file matching --watch-files starting with a glob pattern changes
+      [32m✔[39m reruns test when file matching --watch-files ending with a glob pattern changes
+      [32m✔[39m reruns test when file matching --watch-files with glob pattern in between changes
+      [32m✔[39m reruns test when file matching --watch-files outside the current working directory changes
+      [32m✔[39m does not rerun test when file not matching --watch-files is changed (2600ms)
+      [32m✔[39m picks up new test files when they are added
+      [32m✔[39m reruns test when file matching --extension is changed
+      [32m✔[39m reruns when "rs\n" typed
+      [32m✔[39m reruns test when file starting with . and matching --extension is changed
+      [32m✔[39m ignores files in "node_modules" and ".git" by default
+      [32m✔[39m ignores files matching --watch-ignore
+      [32m✔[39m ignores files whose name is the watch glob
+      [32m✔[39m reloads test files when they change
+      [32m✔[39m reloads test dependencies when they change
+      [32m✔[39m reports a global leak on every run
+      [32m✔[39m keeps globals introduced by the first run
+      [32m✔[39m respects --fgrep on re-runs
+      [32m✔[39m should not leak event listeners (2795ms)
+      when in parallel mode
+        [32m✔[39m reruns test when watched test file is touched
+        [32m✔[39m keeps watching when the last test file is removed
+      with required hooks
+        [32m✔[39m mochaHooks.beforeAll runs as expected
+        [32m✔[39m mochaHooks.beforeEach runs as expected
+        [32m✔[39m mochaHooks.afterAll runs as expected
+        [32m✔[39m mochaHooks.afterEach runs as expected
+      --clear-screen
+        [32m✔[39m clears the terminal before each run when enabled
+        [32m✔[39m does not clear the terminal when disabled
+
+
+  --parallel
+    when a test has a syntax error
+      when there is only a single test file
+        [32m✔[39m should fail gracefully (2995ms)
+      when there are multiple test files
+        [32m✔[39m should fail gracefully (3330ms)
+    when used with CJS tests
+      [32m✔[39m should have the same result as with --no-parallel (4312ms)
+    when used with ESM tests
+      [32m✔[39m should have the same result as with --no-parallel (2614ms)
+    when used with --retries
+      [32m✔[39m should retry tests appropriately
+    when used with --allow-uncaught
+      [32m✔[39m should bubble up an exception
+    when used with --file
+      [32m✔[39m should error out
+    when used with --sort
+      [32m✔[39m should error out
+    when used with exclusive tests
+      [32m✔[39m should error out
+    when used with --bail
+      [32m✔[39m should skip some tests
+      [32m✔[39m should fail
+    when encountering a "bail" in context
+      [32m✔[39m should skip some tests
+      [32m✔[39m should fail
+    when used with "grep"
+      [32m✔[39m should be equivalent to running in serial
+    reporter equivalence
+      when multiple test files run with --reporter=dot
+        [32m✔[39m should have the same result as when run with --no-parallel
+      when multiple test files run with --reporter=doc
+        [32m✔[39m should have the same result as when run with --no-parallel
+      when multiple test files run with --reporter=tap
+        [32m✔[39m should have the same result as when run with --no-parallel
+      when multiple test files run with --reporter=json
+        [32m✔[39m should have the same result as when run with --no-parallel
+      when multiple test files run with --reporter=list
+        [32m✔[39m should have the same result as when run with --no-parallel
+      when multiple test files run with --reporter=min
+        [32m✔[39m should have the same result as when run with --no-parallel
+      when multiple test files run with --reporter=spec
+        [32m✔[39m should have the same result as when run with --no-parallel
+      when multiple test files run with --reporter=nyan
+        [32m✔[39m should have the same result as when run with --no-parallel
+      when multiple test files run with --reporter=xunit
+        [32m✔[39m should have the same result as when run with --no-parallel
+      when multiple test files run with --reporter=landing
+        [32m✔[39m should have the same result as when run with --no-parallel
+      when multiple test files run with --reporter=github-actions
+        [32m✔[39m should have the same result as when run with --no-parallel
+      when a single test file is run with --reporter=dot
+        [32m✔[39m should have the same output as when run with --no-parallel
+      when a single test file is run with --reporter=doc
+        [32m✔[39m should have the same output as when run with --no-parallel
+      when a single test file is run with --reporter=tap
+        [32m✔[39m should have the same output as when run with --no-parallel
+      when a single test file is run with --reporter=list
+        [32m✔[39m should have the same output as when run with --no-parallel
+      when a single test file is run with --reporter=min
+        [32m✔[39m should have the same output as when run with --no-parallel
+      when a single test file is run with --reporter=spec
+        [32m✔[39m should have the same output as when run with --no-parallel
+      when a single test file is run with --reporter=nyan
+        [32m✔[39m should have the same output as when run with --no-parallel
+      when a single test file is run with --reporter=landing
+        [32m✔[39m should have the same output as when run with --no-parallel
+      when a single test file is run with --reporter=progress
+        [32m✔[39m should fail due to incompatibility
+      when a single test file is run with --reporter=markdown
+        [32m✔[39m should fail due to incompatibility
+      when a single test file is run with --reporter=json-stream
+        [32m✔[39m should fail due to incompatibility
+      when a single test file is run with --reporter=json
+        [32m✔[39m should have the same output as when run with --no-parallel
+      when a single test file is run with --reporter=xunit
+        [32m✔[39m should have the same output as when run with --no-parallel
+    pool shutdown
+      during normal operation
+        [32m✔[39m should not leave orphaned processes around
+      during operation with --bail
+        [32m✔[39m should not leave orphaned processes around
+
+
+  391 passing (48s)
+  1 pending
+
+
+> mocha@12.0.3 test-node:interfaces
+> run-p test-node:interfaces:*
+
+
+> mocha@12.0.3 test-node:interfaces:bdd
+> npm run -s test-node-run -- --ui bdd test/interfaces/bdd.spec
+
+
+> mocha@12.0.3 test-node:interfaces:exports
+> npm run -s test-node-run -- --ui exports test/interfaces/exports.spec
+
+
+> mocha@12.0.3 test-node:interfaces:qunit
+> npm run -s test-node-run -- --ui qunit test/interfaces/qunit.spec
+
+
+> mocha@12.0.3 test-node:interfaces:tdd
+> npm run -s test-node-run -- --ui tdd test/interfaces/tdd.spec
+
+Browserslist: browsers data (caniuse-lite) is 9 months old. Please run:
+  npx update-browserslist-db@latest
+  Why you should do it regularly: https://github.com/browserslist/update-db#readme
+Browserslist: browsers data (caniuse-lite) is 9 months old. Please run:
+  npx update-browserslist-db@latest
+  Why you should do it regularly: https://github.com/browserslist/update-db#readme
+Browserslist: browsers data (caniuse-lite) is 9 months old. Please run:
+  npx update-browserslist-db@latest
+  Why you should do it regularly: https://github.com/browserslist/update-db#readme
+Browserslist: browsers data (caniuse-lite) is 9 months old. Please run:
+  npx update-browserslist-db@latest
+  Why you should do it regularly: https://github.com/browserslist/update-db#readme
+
+
+  integer primitives
+    arithmetic
+      [32m✔[39m should add
+      [32m✔[39m should subtract
+
+  integer primitives
+    arithmetic is not
+      [32m✔[39m should add
+
+  test suite
+    [32m✔[39m share a property
+
+  pending suite
+    this is pending suite
+      - should not run
+
+  pending tests
+    - should not run
+
+  setting timeout by appending it to test
+    [32m✔[39m enables users to call timeout on active tests
+    - enables users to call timeout on pending tests
+    [32m✔[39m sets timeout on pending tests
+    [32m✔[39m sets timeout on running tests
+
+
+  7 passing (6ms)
+  3 pending
+
+
+
+  integer primitives
+    [32m✔[39m should add
+    [32m✔[39m should decrement
+
+  String
+    [32m✔[39m #length
+
+
+  3 passing (3ms)
+
+
+
+  integer primitives
+    arithmetic
+      [32m✔[39m should add
+      [32m✔[39m should subtract
+      - should skip this test
+      should skip this suite
+        - should skip this test
+
+
+  2 passing (5ms)
+  2 pending
+
+
+
+  Array
+    #indexOf()
+      [32m✔[39m should return -1 when the value is not present
+      [32m✔[39m should return the correct index when the value is present
+
+
+  2 passing (7ms)
+
+
+> mocha@12.0.3 test-node:jsapi
+> node test/jsapi/index.js
+
+
+
+  Suite
+    instance method
+      clone()
+        [32m✔[39m should clone the Suite, omitting children
+      reset()
+        [32m✔[39m should reset the `delayed` state
+        [32m✔[39m should forward reset to suites and tests
+        [32m✔[39m should forward reset to all hooks
+      timeout()
+        when no argument is passed
+          [32m✔[39m should return the timeout value
+        when argument is passed
+          [32m✔[39m should return the Suite object
+      slow()
+        when given a string
+          [32m✔[39m should parse it
+        when no argument is passed
+          [32m✔[39m should return the slow value
+        when argument is passed
+          [32m✔[39m should return the Suite object
+      bail()
+        when no argument is passed
+          [32m✔[39m should return the bail value
+        when argument is passed
+          [32m✔[39m should return the Suite object
+      beforeAll()
+        wraps the passed in function in a Hook
+          [32m✔[39m adds it to _beforeAll
+          [32m✔[39m appends title to hook
+          [32m✔[39m uses function name if available
+      afterAll()
+        wraps the passed in function in a Hook
+          [32m✔[39m adds it to _afterAll
+          [32m✔[39m appends title to hook
+          [32m✔[39m uses function name if available
+      beforeEach()
+        wraps the passed in function in a Hook
+          [32m✔[39m adds it to _beforeEach
+          [32m✔[39m appends title to hook
+          [32m✔[39m uses function name if available
+        when the suite is pending
+          [32m✔[39m should not create a hook
+      afterEach()
+        wraps the passed in function in a Hook
+          [32m✔[39m adds it to _afterEach
+          [32m✔[39m appends title to hook
+          [32m✔[39m uses function name if available
+      create()
+        [32m✔[39m does not create a second root suite
+        [32m✔[39m does not denote the root suite by being titleless
+      addSuite()
+        [32m✔[39m sets the parent on the added Suite
+        [32m✔[39m copies the timeout value
+        [32m✔[39m copies the slow value
+        [32m✔[39m adds the suite to the suites collection
+        [32m✔[39m treats suite as pending if its parent is pending
+      addTest()
+        [32m✔[39m sets the parent on the added test
+        [32m✔[39m copies the timeout value
+        [32m✔[39m adds the test to the tests collection
+      fullTitle()
+        when there is no parent
+          [32m✔[39m returns the suite title
+        when there is a parent
+          [32m✔[39m returns the combination of parent's and suite's title
+      titlePath()
+        when there is no parent
+          [32m✔[39m returns the suite title
+        when there is a parent
+          the parent is the root suite
+            [32m✔[39m returns the suite title
+          the parent is not the root suite
+            [32m✔[39m returns the concatenation of parent's and suite's title
+      total()
+        when there are no nested suites or tests
+          [32m✔[39m should return 0
+        when there are several tests in the suite
+          [32m✔[39m should return the number
+      eachTest(fn)
+        when there are no nested suites or tests
+          [32m✔[39m should return 0
+        when there are several tests in the suite
+          [32m✔[39m should return the number
+        when there are several levels of nested suites
+          [32m✔[39m should return the number
+      constructor
+        [32m✔[39m should throw an error if the title isn't a string
+        [32m✔[39m should not throw if the title is a string
+      timeout()
+        [32m✔[39m should convert a string to milliseconds
+      hasOnly()
+        [32m✔[39m should return true if a test has `only`
+        [32m✔[39m should return true if a suite has `only`
+        [32m✔[39m should return true if nested suite has `only`
+        [32m✔[39m should return false if no suite or test is marked `only`
+      filterOnly()
+        [32m✔[39m should filter out all other tests and suites if a test has `only`
+        [32m✔[39m should filter out all other tests and suites if a suite has `only`
+      markOnly()
+        [32m✔[39m should call appendOnlySuite on parent
+
+  Test
+    initialization
+      [32m✔[39m should throw an error if the title isn't a string
+      [32m✔[39m should not throw if the title is a string
+
+  Runner
+    instance method
+      grep()
+        [32m✔[39m should update the runner.total with number of matched tests
+        [32m✔[39m should update the runner.total with number of matched tests when inverted
+      grepTotal()
+        [32m✔[39m should return the total number of matched tests
+        [32m✔[39m should return the total number of matched tests when inverted
+      globalProps()
+        [32m✔[39m should include common non enumerable globals
+      globals()
+        [32m✔[39m should default to the known globals
+        [32m✔[39m should white-list globals
+      checkGlobals(test)
+        [32m✔[39m should allow variables that match a wildcard
+        [32m✔[39m should emit "fail" when a new global is introduced
+        [32m✔[39m should emit "fail" when a single new disallowed global is introduced after a single extra global is allowed
+        [32m✔[39m should not fail when a new common global is introduced
+        [32m✔[39m should pluralize the error message when several are introduced
+        [32m✔[39m should respect per test whitelisted globals
+        [32m✔[39m should respect per test whitelisted globals but still detect other leaks
+        [32m✔[39m should emit "fail" when a global beginning with "d" is introduced
+      hook()
+        [32m✔[39m should execute hooks after failed test if suite bail is true
+        [32m✔[39m should augment hook title with current test title
+      fail()
+        [32m✔[39m should increment `Runner#failures`
+        [32m✔[39m should set `Test#state` to "failed"
+        [32m✔[39m should emit "fail"
+        [32m✔[39m should emit a helpful message when failed with a string
+        [32m✔[39m should emit a the error when failed with an Error instance
+        [32m✔[39m should emit the error when failed with an Error-like object
+        [32m✔[39m should emit a helpful message when failed with an Object
+        [32m✔[39m should emit a helpful message when failed with an Array
+        [32m✔[39m should recover if the error stack is not writable
+        [32m✔[39m should return and not increment failures when test is pending
+        [32m✔[39m should increment .failures
+        [32m✔[39m should emit "fail"
+        [32m✔[39m should not emit "end" if suite bail is not true
+        when Runner has stopped
+          when test is not pending
+            when error is the "multiple done" variety
+              [32m✔[39m should throw the "multiple done" error
+            when error is not of the "multiple done" variety
+              [32m✔[39m should throw a "fatal" error
+      run()
+        [32m✔[39m should emit "retry" when a retryable test fails
+        [32m✔[39m should not throw an exception if something emits EVENT_TEST_END with a non-Test object
+        [32m✔[39m should clean references after a run
+        [32m✔[39m should not clean references after a run when `cleanReferencesAfterRun` is `false`
+        [32m✔[39m should not leak `Process.uncaughtException` listeners
+        stack traces
+          short
+            [32m✔[39m should prettify the stack-trace
+            [32m✔[39m should prettify stack-traces in error cause trail
+          long
+            [32m✔[39m should display the full stack-trace
+            [32m✔[39m should display full stack-traces in error cause trail
+          ginormous
+            [32m✔[39m should not hang if overlong error message is single line
+            [32m✔[39m should not hang if overlong error message is multiple lines
+      runAsync()
+        [32m✔[39m should return a Promise with a failure count
+        [32m✔[39m should pass through options to Runner#run
+      dispose()
+        [32m✔[39m should remove all listeners from itself
+        [32m✔[39m should remove "error" listeners from a test
+        [32m✔[39m should remove "uncaughtException" listeners from the process
+      runTest()
+        [32m✔[39m should return when no tests to run
+      runTests()
+        when failHookAffectedTests is enabled
+          [32m✔[39m should fail remaining and nested tests on a failed `beforeEach` hook
+        when failHookAffectedTests is disabled
+          [32m✔[39m should not fail nested tests on a failed `beforeEach` hook
+      allowUncaught()
+        [32m✔[39m should allow unhandled errors to propagate through
+        [32m✔[39m should not allow unhandled errors in sync hooks to propagate through
+        [32m✔[39m should allow unhandled errors in sync hooks to propagate through
+        [32m✔[39m async - should allow unhandled errors in hooks to propagate through
+      abort()
+        [32m✔[39m should set _abort property to true
+        [32m✔[39m should return the Runner
+      _uncaught()
+        when called with a non-Runner context
+          [32m✔[39m should throw
+      uncaught()
+        when allow-uncaught is set to true
+          [32m✔[39m should propagate error and throw
+        when provided an object argument
+          when argument is not an Error
+            [32m✔[39m should fail with a transient Runnable and a new Error coerced from the object
+          when argument is a PendingError
+            [32m✔[39m should ignore argument and return
+          when argument is an Error
+            [32m✔[39m should add the "uncaught" property to the Error
+            when no Runnables are running
+              [32m✔[39m should fail with a transient Runnable and the error
+              when Runner is RUNNING
+                [32m✔[39m should not emit start/end events
+              when Runner is IDLE
+                [32m✔[39m should emit start/end events for the benefit of reporters
+              when Runner is STOPPED
+                [32m✔[39m should not emit start/end events, since this presumably would have already happened
+                [32m✔[39m should throw
+            when a Runnable is running or has run
+              [32m✔[39m should clear any pending timeouts
+              when current Runnable has already failed
+                [32m✔[39m should not attempt to fail again
+              when current Runnable has been marked pending
+                [32m✔[39m should attempt to fail
+              when the current Runnable has already passed
+                [32m✔[39m should fail with the current Runnable and the error
+                [32m✔[39m should abort the runner without emitting end event
+              when the current Runnable is still running
+                when the current Runnable is a Test
+                  [32m✔[39m should run callback(err) to handle failing and hooks
+                  [32m✔[39m should not notify test has ended
+                  [32m✔[39m should not notify run has ended
+                when the current Runnable is a Hook
+                  [32m✔[39m should run callback(err) to handle failing hook pattern
+                  [32m✔[39m should not notify test has ended
+                  [32m✔[39m should not notify run has ended
+      linkPartialObjects()
+        [32m✔[39m should return the Runner
+      isParallelMode()
+        [32m✔[39m should return false
+      workerReporter()
+        [32m✔[39m should throw
+
+  Runnable(title, fn)
+    #timeout(ms)
+      when value is less than lower bound
+        [32m✔[39m should clamp to lower bound given numeric
+        [32m✔[39m should clamp to lower bound given timestamp
+      when value is equal to lower bound
+        given numeric value
+          [32m✔[39m should set the timeout value to disabled
+        given string timestamp
+          [32m✔[39m should set the timeout value to disabled
+      when value is within `setTimeout` bounds
+        given numeric value
+          [32m✔[39m should set the timeout value
+        given string timestamp
+          [32m✔[39m should set the timeout value
+      when value is equal to upper bound
+        given numeric value
+          [32m✔[39m should set the disabled timeout value
+      when value is out-of-bounds
+        given numeric value
+          [32m✔[39m should set the disabled timeout value
+    #slow(ms)
+      [32m✔[39m should set the slow threshold
+      [32m✔[39m should not set the slow threshold if the parameter is not passed
+      [32m✔[39m should not set the slow threshold if the parameter is undefined
+      when passed a time-formatted string
+        [32m✔[39m should convert to ms
+    #reset
+      [32m✔[39m should reset current run state
+    .title
+      [32m✔[39m should be present
+    .titlePath()
+      [32m✔[39m returns the concatenation of the parent's title path and runnable's title
+    when arity >= 1
+      [32m✔[39m should be .async
+      [32m✔[39m should not be .sync
+    when arity == 0
+      [32m✔[39m should not be .async
+      [32m✔[39m should be .sync
+    #globals
+      [32m✔[39m should allow for whitelisting globals
+    #retries(n)
+      [32m✔[39m should set the number of retries
+    .run(fn)
+      when .pending
+        [32m✔[39m should not invoke the callback
+      when sync
+        without error
+          [32m✔[39m should invoke the callback
+        when an exception is thrown
+          [32m✔[39m should invoke the callback with error
+        when an exception is thrown and is allowed to remain uncaught
+          [32m✔[39m throws an error when it is allowed
+      when timeouts are disabled
+        [32m✔[39m should not error with timeout
+      when async
+        [32m✔[39m should allow updating the timeout (51ms)
+        [32m✔[39m should allow a timeout of 0
+        without error
+          [32m✔[39m should invoke the callback
+        when the callback is invoked several times
+          without an error
+            [32m✔[39m should emit a single "error" event
+          with an error
+            [32m✔[39m should emit a single "error" event
+        when an exception is thrown
+          [32m✔[39m should invoke the callback
+          [32m✔[39m should not throw its own exception if passed a non-object
+        when an exception is thrown and is allowed to remain uncaught
+          [32m✔[39m throws an error when it is allowed
+        when an error is passed
+          [32m✔[39m should invoke the callback
+        when done() is invoked with a non-Error object
+          [32m✔[39m should invoke the callback
+        when done() is invoked with a string
+          [32m✔[39m should invoke the callback
+      when fn returns a promise
+        when the promise is fulfilled with no value
+          [32m✔[39m should invoke the callback
+        when the promise is fulfilled with a value
+          [32m✔[39m should invoke the callback
+        when the promise is rejected
+          [32m✔[39m should invoke the callback
+        when the promise is rejected without a reason
+          [32m✔[39m should invoke the callback
+        when the promise takes too long to settle
+          [32m✔[39m should throw the timeout error
+      when fn returns a non-promise
+        [32m✔[39m should invoke the callback
+      if timed-out
+        [32m✔[39m should ignore call to `done` and not execute callback again
+      if async
+        [32m✔[39m this.skip() should set runnable to pending
+        [32m✔[39m this.skip() should halt synchronous execution
+      when fn is not a function
+        [32m✔[39m should throw an error
+    #isFailed()
+      [32m✔[39m should return `true` if test has not failed
+      [32m✔[39m should return `true` if test has failed
+      [32m✔[39m should return `false` if test is pending
+    #resetTimeout()
+      [32m✔[39m should not time out if timeouts disabled after reset
+    static method
+      toValueOrError
+        [32m✔[39m should return identity if parameter is truthy
+        [32m✔[39m should return an Error if parameter is falsy
+    interesting property
+      id
+        [32m✔[39m should have a unique identifier
+        [32m✔[39m should have a permanent identifier
+
+  serial
+    hooks
+      [32m✔[39m one
+      [32m✔[39m two
+      [32m✔[39m three
+
+  serial
+    nested
+      [32m✔[39m foo
+      [32m✔[39m bar
+      hooks
+        [32m✔[39m one
+        [32m✔[39m two
+
+  async
+    hooks
+      [32m✔[39m one
+      [32m✔[39m two
+      [32m✔[39m three
+
+  durations
+    when slow
+      [32m✔[39m should highlight in red (101ms)
+    when reasonable
+      [32m✔[39m should highlight in yellow (50ms)
+    when fast
+      [32m✔[39m should not highlight
+
+  global leaks
+    [32m✔[39m should cause tests to fail
+    [32m✔[39m should pass when accepted
+    [32m✔[39m should pass with wildcard
+    [32m✔[39m should pass when prefixed "mocha-"
+
+  timeouts
+    [32m✔[39m should error on timeout
+    [32m✔[39m should allow overriding per-test (50ms)
+    chaining calls
+      suite-level
+        should override for inner test cases and deeply nested suites
+          [32m✔[39m inner test (1001ms)
+          nested suite
+            [32m✔[39m nested test (2200ms)
+    disabling
+      [32m✔[39m should work with timeout(0)
+      using beforeEach
+        [32m✔[39m should work with timeout(0)
+      using before
+        [32m✔[39m should work with timeout(0)
+      using timeout(0)
+        [32m✔[39m should suppress timeout(4)
+      suite-level
+        [32m✔[39m should work with timeout(0)
+        nested suite
+          [32m✔[39m should work with timeout(0)
+      chaining calls
+        [32m✔[39m should allow overriding via chaining (51ms)
+        suite-level
+          [32m✔[39m should work with timeout(0)
+          nested suite
+            [32m✔[39m should work with timeout(0)
+
+
+  222 passing (4s)
+
+done
+
+> mocha@12.0.3 test-node:only
+> run-p test-node:only:*
+
+
+> mocha@12.0.3 test-node:only:bddRequire
+> npm run -s test-node-run-only -- --ui qunit test/only/bdd-require.spec --no-parallel
+
+
+> mocha@12.0.3 test-node:only:globalBdd
+> npm run -s test-node-run-only -- --ui bdd test/only/global/bdd.spec --no-parallel
+
+
+> mocha@12.0.3 test-node:only:globalQunit
+> npm run -s test-node-run-only -- --ui qunit test/only/global/qunit.spec --no-parallel
+
+
+> mocha@12.0.3 test-node:only:globalTdd
+> npm run -s test-node-run-only -- --ui tdd test/only/global/tdd.spec --no-parallel
+
+Browserslist: browsers data (caniuse-lite) is 9 months old. Please run:
+  npx update-browserslist-db@latest
+  Why you should do it regularly: https://github.com/browserslist/update-db#readme
+Browserslist: browsers data (caniuse-lite) is 9 months old. Please run:
+  npx update-browserslist-db@latest
+  Why you should do it regularly: https://github.com/browserslist/update-db#readme
+Browserslist: browsers data (caniuse-lite) is 9 months old. Please run:
+  npx update-browserslist-db@latest
+  Why you should do it regularly: https://github.com/browserslist/update-db#readme
+Browserslist: browsers data (caniuse-lite) is 9 months old. Please run:
+  npx update-browserslist-db@latest
+  Why you should do it regularly: https://github.com/browserslist/update-db#readme
+
+
+  [32m✔[39m #Root-Suite, should run this bdd test-case #1
+
+  1 passing (2ms)
+
+
+
+  [32m✔[39m #Root-Suite, should run this tdd test-case #1
+
+  1 passing (3ms)
+
+
+
+  [32m✔[39m #Root-Suite, should run this qunit test-case #1
+
+  1 passing (2ms)
+
+
+
+  0 passing (0ms)
+
+
+> mocha@12.0.3 test-node:reporters
+> npm run -s test-node-run -- "test/reporters/*.spec.{cjs,js}"
+
+Browserslist: browsers data (caniuse-lite) is 9 months old. Please run:
+  npx update-browserslist-db@latest
+  Why you should do it regularly: https://github.com/browserslist/update-db#readme
+
+
+  Base reporter
+    [32m✔[39m should stringify objects
+    [32m✔[39m should stringify Object.create(null)
+    [32m✔[39m should handle error messages that are not strings
+    [32m✔[39m should interpret 'chai' module custom error messages
+    [32m✔[39m should interpret 'assert' module custom error messages
+    [32m✔[39m should remove message from stack
+    [32m✔[39m should use 'inspect' if 'inspect' and 'message' are set
+    [32m✔[39m should set an empty message if neither 'inspect' nor 'message' is set
+    [32m✔[39m should not modify stack if it does not contain message
+    [32m✔[39m should list multiple Errors per test
+    showDiff
+      [32m✔[39m should show diffs by default
+      [32m✔[39m should show diffs if 'err.showDiff' is true
+      [32m✔[39m should not show diffs if 'err.showDiff' is false
+      [32m✔[39m should not show diffs if 'expected' is not defined
+      [32m✔[39m should not show diffs if 'hideDiff' is true
+    getting two strings
+      [32m✔[39m should show strings diff as is
+    diff generation
+      [32m✔[39m should generate unified diffs if 'inlineDiffs' is false
+      [32m✔[39m should generate inline diffs if 'inlineDiffs' is true
+      [32m✔[39m should truncate overly long 'actual' 
+      [32m✔[39m should truncate overly long 'expected' 
+      [32m✔[39m should not truncate overly long 'actual' if maxDiffSize=0
+      [32m✔[39m should not truncate overly long 'expected' if maxDiffSize=0
+    inline strings diff
+      [32m✔[39m should show single line diff if 'inlineDiffs' is true
+      [32m✔[39m should split lines if string has more than 4 line breaks
+    unified diff
+      [32m✔[39m should separate diff hunks by two dashes
+    when 'reporterOption.maxDiffSize' is provided
+      [32m✔[39m should set 'Base.maxDiffSize' used for truncating diffs
+    message and stack splitting
+      [32m✔[39m should render the message and frames when the stack is only frames
+      [32m✔[39m should not duplicate an embedded stack when the message's frames are rewritten in the stack
+      [32m✔[39m should split identically when the rewritten stack has a trailing newline
+    error causes
+      [32m✔[39m should append any error cause trail to stack traces
+      [32m✔[39m should not get stuck in a hypothetical circular error cause trail
+      [32m✔[39m should set an empty cause if neither 'inspect' nor 'message' is set
+      [32m✔[39m should not add cause trail if error does not contain message
+    when reporter output immune to user test changes
+      [32m✔[39m should let you stub out console.log without effecting reporters output
+
+  Doc reporter
+    event handlers
+      on 'suite' event
+        when suite root does not exist
+          [32m✔[39m should log html with indents and expected title
+          [32m✔[39m should escape title where necessary
+        when suite root exists
+          [32m✔[39m should not log any html
+      on 'suite end' event
+        when suite root does not exist
+          [32m✔[39m should log expected html with indents
+        when suite root exists
+          [32m✔[39m should not log any html
+      on 'pass' event
+        [32m✔[39m should log html with indents, expected title, and body
+        [32m✔[39m should escape title and body where necessary
+      on 'fail' event
+        [32m✔[39m should log html with indents, expected title, body, and error
+        [32m✔[39m should escape title, body, and error where necessary
+
+  Dot reporter
+    event handlers
+      on 'start' event
+        [32m✔[39m should write a newline
+      on 'pending' event
+        when window width is greater than 1
+          [32m✔[39m should write a newline followed by a comma
+        when window width is less than or equal to 1
+          [32m✔[39m should write a comma
+      on 'pass' event
+        when window width is greater than 1
+          when test speed is fast
+            [32m✔[39m should write a newline followed by a dot
+        when window width is less than or equal to 1
+          when test speed is fast
+            [32m✔[39m should write a grey dot
+          when test speed is medium
+            [32m✔[39m should write a yellow dot
+          when test speed is slow
+            [32m✔[39m should write a bright yellow dot
+      on 'fail' event
+        when window width is greater than 1
+          [32m✔[39m should write a newline followed by an exclamation mark
+        when window width is less than or equal to 1
+          [32m✔[39m should write an exclamation mark
+      on 'end' event
+        [32m✔[39m should call epilogue
+
+  GitHub Actions reporter
+    [32m✔[39m should be exported as 'github-actions'
+    [32m✔[39m should have a static description
+    event handlers
+      on 'fail' and 'end' events
+        [32m✔[39m should emit ::error annotation for failures
+        [32m✔[39m should handle errors without stack trace
+        [32m✔[39m should handle a stack trace without a parseable location
+        [32m✔[39m should not emit annotations if no failures
+      on 'end' event with GITHUB_STEP_SUMMARY
+        [32m✔[39m should write job summary when env var is set
+    escaping
+      [32m✔[39m should escape newlines and percent signs in error messages
+
+  JSON Stream reporter
+    event handlers
+      on 'start' event
+        [32m✔[39m should write stringified start with expected total
+      on 'pass' event
+        [32m✔[39m should write stringified test data
+      on 'fail' event
+        when error stack exists
+          [32m✔[39m should write stringified test data with error data
+        when error stack does not exist
+          [32m✔[39m should write stringified test data with error data
+      on 'end' event
+        [32m✔[39m should write summary statistics
+
+  JSON reporter
+    test results
+      [32m✔[39m should have 1 test failure
+      [32m✔[39m should have 1 test pending
+      [32m✔[39m should have 1 test pass
+      [32m✔[39m should handle circular objects in errors
+    when "reporterOption.output" is provided
+      [32m✔[39m should write test results to file
+      [32m✔[39m should warn and write test results to console
+      [32m✔[39m should throw "unsupported error" in browser
+
+  Landing reporter
+    event handlers
+      on 'start' event
+        [32m✔[39m should write newlines
+        [32m✔[39m should call cursor hide
+      on 'test end' event
+        when test passes
+          [32m✔[39m should write expected landing strip
+        when test fails
+          [32m✔[39m should write expected landing strip
+      on 'end' event
+        [32m✔[39m should call cursor show and epilogue
+
+  List reporter
+    event handlers
+      on 'start' and 'test' events
+        [32m✔[39m should write expected newline and title
+      on 'pending' event
+        [32m✔[39m should write expected title
+      on 'pass' event
+        [32m✔[39m should call cursor CR
+        [32m✔[39m should write expected symbol, title, and duration
+      on 'fail' event
+        [32m✔[39m should call cursor CR
+        [32m✔[39m should write expected error number and title
+        [32m✔[39m should immediately construct fail strings
+      on 'end' event
+        [32m✔[39m should call epilogue
+
+  Markdown reporter
+    event handlers
+      on 'suite' event
+        [32m✔[39m should write expected slugged titles on 'end' event
+      on 'pass' event
+        [32m✔[39m should write test code inside js code block, on 'end' event
+
+  Min reporter
+    event handlers
+      on 'start' event
+        [32m✔[39m should clear screen then set cursor position
+      on 'end' event
+        [32m✔[39m should call epilogue
+
+  Nyan reporter
+    event handlers
+      on 'start' event
+        [32m✔[39m should call draw
+      on 'pending' event
+        [32m✔[39m should call draw
+      on 'pass' event
+        [32m✔[39m should call draw
+      on 'fail' event
+        [32m✔[39m should call draw
+      on 'end' event
+        [32m✔[39m should call epilogue
+        [32m✔[39m should write numberOfLines amount of newlines
+        [32m✔[39m should call Base show
+    #draw
+      when 'tick' is false
+        [32m✔[39m should draw face with expected spaces, _ and ^
+      when 'tick' is true
+        [32m✔[39m should draw face with expected spaces, _ and ~
+    #cursorDown
+      [32m✔[39m should write cursor down interaction with expected number
+    #cursorUp
+      [32m✔[39m should write cursor up interaction with expected number
+    #rainbowify
+      when 'useColors' is false
+        [32m✔[39m should return argument string
+      when 'useColors' is true
+        [32m✔[39m should return rainbowified string from the given string and predefined codes
+    #appendRainbow
+      when 'tick' is true
+        [32m✔[39m should set an underscore segment
+        [32m✔[39m should shift each trajectory item if its length is greater than or equal to its max width
+      when 'tick' is false
+        [32m✔[39m should set a dash segment
+    #drawScoreboard
+      [32m✔[39m should write scoreboard with color set with each stat
+      [32m✔[39m should call cursorUp with given numberOfLines
+    #drawRainbow
+      [32m✔[39m should write width, contents and newline for each trajectory
+      [32m✔[39m should call cursorUp with given numberOfLines
+    #face
+      [32m✔[39m should expect "( x .x)" if any failures
+      [32m✔[39m should expect "( o .o)" if any pending but none failing
+      [32m✔[39m should expect "( ^ .^)" if all passing
+      [32m✔[39m should expect "( - .-)" otherwise
+
+  Progress reporter
+    event handlers
+      on 'start' event
+        [32m✔[39m should call cursor hide
+      on 'test end' event
+        when line has changed
+          [32m✔[39m should write expected progress of open and close options
+        when line has not changed
+          [32m✔[39m should not write anything
+      on 'end' event
+        [32m✔[39m should call cursor show and epilogue
+
+  Spec reporter
+    event handlers
+      on 'suite' event
+        [32m✔[39m should return title
+      on 'pending' event
+        [32m✔[39m should return title
+      on 'pass' event
+        when test speed is slow
+          [32m✔[39m should return expected tick, title, and duration
+        when test speed is fast
+          [32m✔[39m should return expected tick, title without a duration
+      on 'fail' event
+        [32m✔[39m should return title and function count
+
+  TAP reporter
+    TAP12 spec
+      event handlers
+        on 'start' event
+          [32m✔[39m should not write a TAP specification version
+        on 'pending' event
+          [32m✔[39m should write expected message including count and title
+        on 'pass' event
+          [32m✔[39m should write expected message including count and title
+        on 'fail' event
+          when 'error' has only message
+            [32m✔[39m should write expected message and error message
+          when 'error' has only stack
+            [32m✔[39m should write expected message and stack
+          when 'error' has both message and stack
+            [32m✔[39m should write expected message, error message, and stack
+          when 'error' has neither message nor stack
+            [32m✔[39m should write expected message only
+        on 'end' event
+          [32m✔[39m should write total tests, passes, failures, & plan
+    TAP13 spec
+      event handlers
+        on 'start' event
+          [32m✔[39m should write the TAP specification version
+        on 'pending' event
+          [32m✔[39m should write expected message including count and title
+        on 'pass' event
+          [32m✔[39m should write expected message including count and title
+        on 'fail' event
+          when 'error' has only message
+            [32m✔[39m should write expected message and error message
+          when 'error' has only stack
+            [32m✔[39m should write expected message and stack
+          when 'error' has both message and stack
+            [32m✔[39m should write expected message, error message, and stack
+          when 'error' has neither message nor stack
+            [32m✔[39m should write expected message only
+        on 'end' event
+          [32m✔[39m should write total tests, passes, failures & plan
+
+  XUnit reporter
+    when 'reporterOptions.output' is provided
+      when fileStream can be created
+        [32m✔[39m should open given file for writing, recursively creating directories in pathname
+      when fileStream cannot be created
+        when given an invalid pathname
+          [32m✔[39m should throw system error
+        when run in browser
+          [32m✔[39m should throw unsupported error
+    event handlers
+      on 'pending', 'pass' and 'fail' events
+        [32m✔[39m should add test to tests called on 'end' event
+    #done
+      when output directed to file
+        [32m✔[39m should run completion callback via 'fileStream.end'
+      when output directed to stdout (or console)
+        [32m✔[39m should run completion callback
+    #write
+      when output directed to file
+        [32m✔[39m should call 'fileStream.write' with line and newline
+      when output directed to stdout
+        [32m✔[39m should call 'process.stdout.write' with line and newline
+      when output directed to console
+        [32m✔[39m should call 'Base.consoleLog' with line
+    #test
+      [32m✔[39m should write expected summary statistics
+      on test failure
+        [32m✔[39m should write expected tag with error details
+        [32m✔[39m should handle non-string diff values
+        [32m✔[39m should remove ANSI escape sequences and invalid XML control characters
+      on test pending
+        [32m✔[39m should write expected tag
+      on test in any other state
+        [32m✔[39m should write expected tag
+    suite name
+      [32m✔[39m should use custom name if provided via reporter options
+      [32m✔[39m should use default name otherwise
+    showRelativePaths reporter option
+      [32m✔[39m shows relative paths for tests if showRelativePaths reporter option is set
+      [32m✔[39m shows absolute paths for tests by default
+
+
+  158 passing (162ms)
+
+
+> mocha@12.0.3 test-node:requires
+> npm run -s test-node-run -- --require coffeescript/register --require test/require/a.cjs --require test/require/b.coffee --require test/require/c.cjs --require test/require/d.coffee test/require/require.spec.cjs
+
+Browserslist: browsers data (caniuse-lite) is 9 months old. Please run:
+  npx update-browserslist-db@latest
+  Why you should do it regularly: https://github.com/browserslist/update-db#readme
+
+
+  require test
+    [32m✔[39m should require args in order
+
+
+  1 passing (3ms)
+
+
+> mocha@12.0.3 test-node:unit
+> npm run -s test-node-run -- "test/unit/**/*.spec.cjs" "test/node-unit/**/*.spec.{cjs,js}"
+
+Browserslist: browsers data (caniuse-lite) is 9 months old. Please run:
+  npx update-browserslist-db@latest
+  Why you should do it regularly: https://github.com/browserslist/update-db#readme
+Browserslist: browsers data (caniuse-lite) is 9 months old. Please run:
+  npx update-browserslist-db@latest
+  Why you should do it regularly: https://github.com/browserslist/update-db#readme
+
+
+  Context
+    nested
+      [32m✔[39m should work
+
+  Context Siblings
+    sequestered sibling
+      [32m✔[39m should work
+    sibling verifiction
+      [32m✔[39m should not have value set within a sibling describe
+      [32m✔[39m should allow test siblings to modify shared context
+      [32m✔[39m should have reset this.calls before describe
+
+  methods
+    timeout()
+      [32m✔[39m should return the timeout
+    slow()
+      [32m✔[39m should return the slow
+    retries
+      [32m✔[39m should return the number of retries
+
+  durations
+    when slow
+      [32m✔[39m should highlight in red (100ms)
+    when reasonable
+      [32m✔[39m should highlight in yellow (50ms)
+    when fast
+      [32m✔[39m should not highlight
+
+  Errors
+    createInvalidReporterError()
+      [32m✔[39m should include expected code in thrown reporter errors
+    createInvalidInterfaceError()
+      [32m✔[39m should include expected code in thrown interface errors
+    createForbiddenExclusivityError()
+      when Mocha instance is running in a worker process
+        [32m✔[39m should output a message regarding incompatibility
+      when Mocha instance is not running in a worker process
+        [32m✔[39m should output a message regarding --forbid-only
+    createUnparsableFileError()
+      [32m✔[39m should include expected code in thrown unparsable file errors
+    isMochaError()
+      when provided an Error object having a known Mocha error code
+        [32m✔[39m should return true
+      when provided an Error object with a non-Mocha error code
+        [32m✔[39m should return false
+      when provided a non-error
+        [32m✔[39m should return false
+
+  global leaks
+    [32m✔[39m should cause tests to fail
+    [32m✔[39m should pass when accepted
+    [32m✔[39m should pass with wildcard
+    [32m✔[39m should pass when prefixed "mocha-"
+
+  Mocha
+    "grep" option
+      [32m✔[39m should add a RegExp to the mocha.options object
+      [32m✔[39m should convert string to a RegExp
+    "fgrep" option
+      [32m✔[39m should escape and convert string to a RegExp
+    .grep()
+      [32m✔[39m should add a RegExp to the mocha.options object
+      [32m✔[39m should convert grep string to a RegExp
+      [32m✔[39m should covert grep regex-like string to a RegExp
+      [32m✔[39m should return its parent Mocha object for chainability
+    "invert" option
+      [32m✔[39m should add a Boolean to the mocha.options object
+
+  async
+    hooks
+      [32m✔[39m one
+      [32m✔[39m two
+      [32m✔[39m three
+
+  serial
+    nested
+      [32m✔[39m foo
+      [32m✔[39m bar
+      hooks
+        [32m✔[39m one
+        [32m✔[39m two
+
+  serial
+    hooks
+      [32m✔[39m one
+      [32m✔[39m two
+      [32m✔[39m three
+
+  hook timeout
+    [32m✔[39m should work
+
+  Hook
+    error
+      [32m✔[39m should set the hook._error
+      [32m✔[39m should get the hook._error when called without arguments
+    reset
+      [32m✔[39m should call Runnable.reset
+      [32m✔[39m should reset the error state
+
+  exports interface
+    [32m✔[39m assigns file to nested suites and their hooks
+    [32m✔[39m keeps each file on its own suites and leaves the shared root unset
+
+  Mocha
+    constructor
+      [32m✔[39m should set _cleanReferencesAfterRun to true
+      when `timeout` option is `undefined`
+        [32m✔[39m should not attempt to set timeout
+      when `timeout` option is `false`
+        [32m✔[39m should attempt to set timeout
+      when `global` option is an `Array`
+        [32m✔[39m should attempt to set globals
+      when `retries` option is present
+        [32m✔[39m should attempt to set retries`
+      when `retries` option is not present
+        [32m✔[39m should not attempt to set retries
+      when `rootHooks` option is truthy
+        [32m✔[39m shouid attempt to set root hooks
+      when `parallel` option is true
+        and `jobs` option > 1
+          [32m✔[39m should enable parallel mode
+        and `jobs` option <= 1
+          [32m✔[39m should not enable parallel mode
+        when `globalSetup` option is present
+          [32m✔[39m should configure global setup fixtures
+        when `globalTeardown` option is present
+          [32m✔[39m should configure global teardown fixtures
+        when `enableGlobalSetup` option is present
+          [32m✔[39m should toggle global setup fixtures
+        when `enableGlobalTeardown` option is present
+          [32m✔[39m should configure global teardown fixtures
+    instance method
+      allowUncaught()
+        [32m✔[39m should set the allowUncaught option to true
+        [32m✔[39m should set the allowUncaught option to false
+        [32m✔[39m should be chainable
+      asyncOnly()
+        [32m✔[39m should set the asyncOnly option to true
+        [32m✔[39m should set the asyncOnly option to false
+        [32m✔[39m should be chainable
+      bail()
+        [32m✔[39m should set the "bail" flag on the root suite
+        [32m✔[39m should unset the "bail" flag on the root suite
+        [32m✔[39m should be chainable
+      checkLeaks()
+        [32m✔[39m should set the checkLeaks option to true
+      cleanReferencesAfterRun()
+        [32m✔[39m should set the _cleanReferencesAfterRun attribute
+        [32m✔[39m should set the _cleanReferencesAfterRun attribute to false
+        [32m✔[39m should be chainable
+      color()
+        [32m✔[39m should set the color option to true
+        [32m✔[39m should set the color option to false
+        [32m✔[39m should be chainable
+      delay()
+        [32m✔[39m should set the delay option to true
+        [32m✔[39m should be chainable
+      diff()
+        [32m✔[39m should set the diff option to true
+        [32m✔[39m should set the diff option to false
+      dispose()
+        [32m✔[39m should dispose the root suite
+        [32m✔[39m should dispose previous test runner
+        [32m✔[39m should unload the files
+      dryRun()
+        [32m✔[39m should set the dryRun option to true
+        [32m✔[39m should set the dryRun option to false
+      passOnFailingTestSuite()
+        [32m✔[39m should set the passOnFailingTestSuite option to false
+        [32m✔[39m should set the passOnFailingTestSuite option to true
+      failZero()
+        [32m✔[39m should set the failZero option to true
+        [32m✔[39m should set the failZero option to false
+      forbidOnly()
+        [32m✔[39m should set the forbidOnly option to true
+        [32m✔[39m should set the forbidOnly option to false
+        [32m✔[39m should be chainable
+      forbidPending()
+        [32m✔[39m should set the forbidPending option to true
+        [32m✔[39m should set the forbidPending option to false
+        [32m✔[39m should be chainable
+      fullTrace()
+        [32m✔[39m should set the fullTrace option to true
+        [32m✔[39m should set the fullTrace option to false
+        [32m✔[39m should be chainable
+      global()
+        [32m✔[39m should be an empty array initially
+        [32m✔[39m should be chainable
+        when argument is invalid
+          [32m✔[39m should not modify the whitelist when given empty string
+          [32m✔[39m should not modify the whitelist when given empty array
+        when argument is valid
+          [32m✔[39m should add string to the whitelist
+          [32m✔[39m should add contents of string array to the whitelist
+          [32m✔[39m should not have duplicates
+      inlineDiffs()
+        [32m✔[39m should set the inlineDiffs option to true
+        [32m✔[39m should set the inlineDiffs option to false
+        [32m✔[39m should be chainable
+      invert()
+        [32m✔[39m should set the invert option to true
+        [32m✔[39m should be chainable
+      noHighlighting()
+        [32m✔[39m should set the noHighlighting option to true
+        [32m✔[39m should be chainable
+      reporter()
+        [32m✔[39m should be chainable
+        [32m✔[39m should keep reporterOption on options
+        [32m✔[39m should support legacy reporterOptions
+      run()
+        [32m✔[39m should instantiate a reporter
+        - should initialize the stats collector
+        [32m✔[39m should execute the callback when complete
+        when files have been added to the Mocha instance
+          when Mocha is set to eagerly load files
+            [32m✔[39m should eagerly load files
+          when Mocha is set to lazily load files
+            [32m✔[39m should not eagerly load files
+        Runner initialization
+          [32m✔[39m should instantiate a Runner
+          when "grep" option is present
+            [32m✔[39m should configure "grep"
+          when "global" option is present
+            [32m✔[39m should configure global vars
+        Base reporter initialization
+          [32m✔[39m should configure the Base reporter
+          when "color" options is set
+            [32m✔[39m should configure the Base reporter
+        when a reporter instance has a "done" method
+          [32m✔[39m should call the reporter "done" method
+        when a run is in progress
+          [32m✔[39m should throw
+          [32m✔[39m should not call `Runner#runAsync`
+        when the `Mocha` instance is already disposed
+          [32m✔[39m should throw
+          [32m✔[39m should not call `Runner#runAsync`
+        when a run has finished and is called again
+          [32m✔[39m should throw
+          [32m✔[39m should not call `Runner#runAsync()`
+        when Mocha configured for multiple runs and multiple runs are attempted
+          [32m✔[39m should not throw
+          [32m✔[39m should call `Runner#runAsync` for each call
+          [32m✔[39m should reset the root Suite between runs
+          [32m✔[39m should dispose the previous runner
+        when global setup fixtures enabled
+          when global setup fixtures not present
+            [32m✔[39m should not run global setup fixtures
+          when global setup fixtures are present
+            [32m✔[39m should run global setup fixtures
+        when global setup fixtures disabled
+          when global setup fixtures not present
+            [32m✔[39m should not run global setup fixtures
+          when global setup fixtures are present
+            [32m✔[39m should not run global setup fixtures
+        when global teardown fixtures enabled
+          when global teardown fixtures not present
+            [32m✔[39m should not run global teardown fixtures
+          when global teardown fixtures are present
+            [32m✔[39m should run global teardown fixtures
+            when global setup fixtures are present and enabled
+              [32m✔[39m should use the same context as returned by `runGlobalSetup`
+        when global teardown fixtures disabled
+          when global teardown fixtures not present
+            [32m✔[39m should not run global teardown fixtures
+          when global teardown fixtures are present
+            [32m✔[39m should not run global teardown fixtures
+      parallelMode()
+        when `Mocha` is running in a browser
+          [32m✔[39m should throw
+      unloadFile()
+        when run in a browser
+          [32m✔[39m should throw
+      _runGlobalFixtures()
+        [32m✔[39m should execute multiple fixtures in order
+      runGlobalSetup()
+        when fixture(s) are present
+          [32m✔[39m should attempt run the fixtures
+        when a fixture is not present
+          [32m✔[39m should not attempt to run fixtures
+      runGlobalTeardown()
+        when fixture(s) are present
+          [32m✔[39m should attempt to run the fixtures
+        when a fixture is not present
+          [32m✔[39m not attempt to run the fixtures
+      hasGlobalSetupFixtures()
+        when one or more global setup fixtures are present
+          [32m✔[39m should return `true`
+        when no global setup fixtures are present
+          [32m✔[39m should return `false`
+      hasGlobalTeardownFixtures()
+        when one or more global teardown fixtures are present
+          [32m✔[39m should return `true`
+        when no global teardown fixtures are present
+          [32m✔[39m should return `false`
+      rootHooks()
+        [32m✔[39m should be chainable
+        when provided a single "before all" hook
+          [32m✔[39m should attach it to the root suite
+        when provided a single "before each" hook
+          [32m✔[39m should attach it to the root suite
+        when provided a single "after all" hook
+          [32m✔[39m should attach it to the root suite
+        when provided a single "after each" hook
+          [32m✔[39m should attach it to the root suite
+        when provided multiple "before all" hooks
+          [32m✔[39m should attach each to the root suite
+        when provided multiple "before each" hooks
+          [32m✔[39m should attach each to the root suite
+        when provided multiple "after all" hooks
+          [32m✔[39m should attach each to the root suite
+        when provided multiple "after each" hooks
+          [32m✔[39m should attach each to the root suite
+
+  overspecified asynchronous resolution method
+    [32m✔[39m should fail when multiple methods are used
+
+  parseQuery()
+    [32m✔[39m should get queryString and return key-value object
+    [32m✔[39m should parse "+" as a space
+
+  plugin module
+    class PluginLoader
+      constructor
+        when passed no options
+          [32m✔[39m should populate a registry of built-in plugins
+        when passed custom plugins
+          [32m✔[39m should register the custom plugins
+        when passed ignored plugins
+          [32m✔[39m should retain a list of ignored plugins
+      static method
+        create()
+          [32m✔[39m should return a PluginLoader instance
+      instance method
+        register()
+          when the plugin export name is not in use
+            [32m✔[39m should not throw
+          when the plugin export name is already in use
+            [32m✔[39m should throw
+          when the plugin export name is ignored
+            [32m✔[39m should not throw
+            [32m✔[39m should not register the plugin
+          when passed a falsy parameter
+            [32m✔[39m should throw
+          when passed a non-object parameter
+            [32m✔[39m should throw
+          when passed a definition w/o an exportName
+            [32m✔[39m should throw
+        load()
+          when called with a falsy value
+            [32m✔[39m should return false
+          when called with an object containing no recognized plugin
+            [32m✔[39m should return false
+          when called with an object containing a recognized plugin
+            [32m✔[39m should return true
+            [32m✔[39m should retain the value of any matching property in its mapping
+            [32m✔[39m should call the associated validator, if present
+        load()
+          when passed a falsy or non-object value
+            [32m✔[39m should return false
+            [32m✔[39m should not call a validator
+          when passed an object value
+            when no keys match any known named exports
+              [32m✔[39m should return false
+            when a key matches a known named export
+              [32m✔[39m should call the associated validator
+              [32m✔[39m should not call validators whose keys were not found
+              when the value passes the associated validator
+                [32m✔[39m should return true
+                [32m✔[39m should add the implementation to the internal mapping
+                [32m✔[39m should not add an implementation of plugins not present
+              when the value does not pass the associated validator
+                [32m✔[39m should throw
+        finalize()
+          when no plugins have been loaded
+            [32m✔[39m should return an empty map
+          when a plugin has one or more implementations
+            [32m✔[39m should return an object map using `optionName` key for each registered plugin
+            [32m✔[39m should omit unused plugins
+          when a plugin has no "finalize" function
+            [32m✔[39m should return an array of raw implementations
+    root hooks plugin 🎣
+      when impl is an array
+        [32m✔[39m should fail validation
+      when impl is a primitive
+        [32m✔[39m should fail validation
+      when impl is a function
+        [32m✔[39m should pass validation
+      when impl is an object of functions
+        - should pass validation
+      when a loaded impl is finalized
+        [32m✔[39m should flatten the implementations
+    global fixtures plugin
+      global setup
+        when an implementation is a primitive
+          [32m✔[39m should fail validation
+        when an implementation is an array of primitives
+          [32m✔[39m should fail validation
+        when an implementation is a function
+          [32m✔[39m should pass validation
+        when an implementation is an array of functions
+          [32m✔[39m should pass validation
+      global teardown
+        when an implementation is a primitive
+          [32m✔[39m should fail validation
+        when an implementation is an array of primitives
+          [32m✔[39m should fail validation
+        when an implementation is a function
+          [32m✔[39m should pass validation
+        when an implementation is an array of functions
+          [32m✔[39m should pass validation
+
+  Base reporter diff hang protection
+    large buffers
+      [32m✔[39m should not hang when diffing large buffers
+    deeply nested objects
+      [32m✔[39m should not hang when diffing deeply nested objects
+    objects with many keys
+      [32m✔[39m should not hang when diffing objects with many keys
+    normal-sized objects
+      [32m✔[39m should still produce a valid diff for small objects
+
+  using imported "describe"
+    [32m✔[39m using imported "it"
+
+  root
+    [32m✔[39m should be a valid suite
+
+  Runnable(title, fn)
+    #timeout(ms)
+      when value is less than lower bound
+        [32m✔[39m should clamp to lower bound given numeric
+        [32m✔[39m should clamp to lower bound given timestamp
+      when value is equal to lower bound
+        given numeric value
+          [32m✔[39m should set the timeout value to disabled
+        given string timestamp
+          [32m✔[39m should set the timeout value to disabled
+      when value is within `setTimeout` bounds
+        given numeric value
+          [32m✔[39m should set the timeout value
+        given string timestamp
+          [32m✔[39m should set the timeout value
+      when value is equal to upper bound
+        given numeric value
+          [32m✔[39m should set the disabled timeout value
+      when value is out-of-bounds
+        given numeric value
+          [32m✔[39m should set the disabled timeout value
+    #slow(ms)
+      [32m✔[39m should set the slow threshold
+      [32m✔[39m should not set the slow threshold if the parameter is not passed
+      [32m✔[39m should not set the slow threshold if the parameter is undefined
+      when passed a time-formatted string
+        [32m✔[39m should convert to ms
+    #reset
+      [32m✔[39m should reset current run state
+    .title
+      [32m✔[39m should be present
+    .titlePath()
+      [32m✔[39m returns the concatenation of the parent's title path and runnable's title
+    when arity >= 1
+      [32m✔[39m should be .async
+      [32m✔[39m should not be .sync
+    when arity == 0
+      [32m✔[39m should not be .async
+      [32m✔[39m should be .sync
+    #globals
+      [32m✔[39m should allow for whitelisting globals
+    #retries(n)
+      [32m✔[39m should set the number of retries
+    .run(fn)
+      when .pending
+        [32m✔[39m should not invoke the callback
+      when sync
+        without error
+          [32m✔[39m should invoke the callback
+        when an exception is thrown
+          [32m✔[39m should invoke the callback with error
+        when an exception is thrown and is allowed to remain uncaught
+          [32m✔[39m throws an error when it is allowed
+      when timeouts are disabled
+        [32m✔[39m should not error with timeout
+      when async
+        [32m✔[39m should allow updating the timeout (50ms)
+        [32m✔[39m should allow a timeout of 0
+        without error
+          [32m✔[39m should invoke the callback
+        when the callback is invoked several times
+          without an error
+            [32m✔[39m should emit a single "error" event
+          with an error
+            [32m✔[39m should emit a single "error" event
+        when an exception is thrown
+          [32m✔[39m should invoke the callback
+          [32m✔[39m should not throw its own exception if passed a non-object
+        when an exception is thrown and is allowed to remain uncaught
+          [32m✔[39m throws an error when it is allowed
+        when an error is passed
+          [32m✔[39m should invoke the callback
+        when done() is invoked with a non-Error object
+          [32m✔[39m should invoke the callback
+        when done() is invoked with a string
+          [32m✔[39m should invoke the callback
+      when fn returns a promise
+        when the promise is fulfilled with no value
+          [32m✔[39m should invoke the callback
+        when the promise is fulfilled with a value
+          [32m✔[39m should invoke the callback
+        when the promise is rejected
+          [32m✔[39m should invoke the callback
+        when the promise is rejected without a reason
+          [32m✔[39m should invoke the callback
+        when the promise takes too long to settle
+          [32m✔[39m should throw the timeout error
+      when fn returns a non-promise
+        [32m✔[39m should invoke the callback
+      if timed-out
+        [32m✔[39m should ignore call to `done` and not execute callback again
+      if async
+        [32m✔[39m this.skip() should set runnable to pending
+        [32m✔[39m this.skip() should halt synchronous execution
+      when fn is not a function
+        [32m✔[39m should throw an error
+    #isFailed()
+      [32m✔[39m should return `true` if test has not failed
+      [32m✔[39m should return `true` if test has failed
+      [32m✔[39m should return `false` if test is pending
+    #resetTimeout()
+      [32m✔[39m should not time out if timeouts disabled after reset
+    static method
+      toValueOrError
+        [32m✔[39m should return identity if parameter is truthy
+        [32m✔[39m should return an Error if parameter is falsy
+    interesting property
+      id
+        [32m✔[39m should have a unique identifier
+        [32m✔[39m should have a permanent identifier
+
+  Runner
+    instance method
+      grep()
+        [32m✔[39m should update the runner.total with number of matched tests
+        [32m✔[39m should update the runner.total with number of matched tests when inverted
+      grepTotal()
+        [32m✔[39m should return the total number of matched tests
+        [32m✔[39m should return the total number of matched tests when inverted
+      globalProps()
+        [32m✔[39m should include common non enumerable globals
+      globals()
+        [32m✔[39m should default to the known globals
+        [32m✔[39m should white-list globals
+      checkGlobals(test)
+        [32m✔[39m should allow variables that match a wildcard
+        [32m✔[39m should emit "fail" when a new global is introduced
+        [32m✔[39m should emit "fail" when a single new disallowed global is introduced after a single extra global is allowed
+        [32m✔[39m should not fail when a new common global is introduced
+        [32m✔[39m should pluralize the error message when several are introduced
+        [32m✔[39m should respect per test whitelisted globals
+        [32m✔[39m should respect per test whitelisted globals but still detect other leaks
+        [32m✔[39m should emit "fail" when a global beginning with "d" is introduced
+      hook()
+        [32m✔[39m should execute hooks after failed test if suite bail is true
+        [32m✔[39m should augment hook title with current test title
+      fail()
+        [32m✔[39m should increment `Runner#failures`
+        [32m✔[39m should set `Test#state` to "failed"
+        [32m✔[39m should emit "fail"
+        [32m✔[39m should emit a helpful message when failed with a string
+        [32m✔[39m should emit a the error when failed with an Error instance
+        [32m✔[39m should emit the error when failed with an Error-like object
+        [32m✔[39m should emit a helpful message when failed with an Object
+        [32m✔[39m should emit a helpful message when failed with an Array
+        [32m✔[39m should recover if the error stack is not writable
+        [32m✔[39m should return and not increment failures when test is pending
+        [32m✔[39m should increment .failures
+        [32m✔[39m should emit "fail"
+        [32m✔[39m should not emit "end" if suite bail is not true
+        when Runner has stopped
+          when test is not pending
+            when error is the "multiple done" variety
+              [32m✔[39m should throw the "multiple done" error
+            when error is not of the "multiple done" variety
+              [32m✔[39m should throw a "fatal" error
+      run()
+        [32m✔[39m should emit "retry" when a retryable test fails
+        [32m✔[39m should not throw an exception if something emits EVENT_TEST_END with a non-Test object
+        [32m✔[39m should clean references after a run
+        [32m✔[39m should not clean references after a run when `cleanReferencesAfterRun` is `false`
+        [32m✔[39m should not leak `Process.uncaughtException` listeners
+        stack traces
+          short
+            [32m✔[39m should prettify the stack-trace
+            [32m✔[39m should prettify stack-traces in error cause trail
+          long
+            [32m✔[39m should display the full stack-trace
+            [32m✔[39m should display full stack-traces in error cause trail
+          ginormous
+            [32m✔[39m should not hang if overlong error message is single line
+            [32m✔[39m should not hang if overlong error message is multiple lines
+      runAsync()
+        [32m✔[39m should return a Promise with a failure count
+        [32m✔[39m should pass through options to Runner#run
+      dispose()
+        [32m✔[39m should remove all listeners from itself
+        [32m✔[39m should remove "error" listeners from a test
+        [32m✔[39m should remove "uncaughtException" listeners from the process
+      runTest()
+        [32m✔[39m should return when no tests to run
+      runTests()
+        when failHookAffectedTests is enabled
+          [32m✔[39m should fail remaining and nested tests on a failed `beforeEach` hook
+        when failHookAffectedTests is disabled
+          [32m✔[39m should not fail nested tests on a failed `beforeEach` hook
+      allowUncaught()
+        [32m✔[39m should allow unhandled errors to propagate through
+        [32m✔[39m should not allow unhandled errors in sync hooks to propagate through
+        [32m✔[39m should allow unhandled errors in sync hooks to propagate through
+        [32m✔[39m async - should allow unhandled errors in hooks to propagate through
+      abort()
+        [32m✔[39m should set _abort property to true
+        [32m✔[39m should return the Runner
+      _uncaught()
+        when called with a non-Runner context
+          [32m✔[39m should throw
+      uncaught()
+        when allow-uncaught is set to true
+          [32m✔[39m should propagate error and throw
+        when provided an object argument
+          when argument is not an Error
+            [32m✔[39m should fail with a transient Runnable and a new Error coerced from the object
+          when argument is a PendingError
+            [32m✔[39m should ignore argument and return
+          when argument is an Error
+            [32m✔[39m should add the "uncaught" property to the Error
+            when no Runnables are running
+              [32m✔[39m should fail with a transient Runnable and the error
+              when Runner is RUNNING
+                [32m✔[39m should not emit start/end events
+              when Runner is IDLE
+                [32m✔[39m should emit start/end events for the benefit of reporters
+              when Runner is STOPPED
+                [32m✔[39m should not emit start/end events, since this presumably would have already happened
+                [32m✔[39m should throw
+            when a Runnable is running or has run
+              [32m✔[39m should clear any pending timeouts
+              when current Runnable has already failed
+                [32m✔[39m should not attempt to fail again
+              when current Runnable has been marked pending
+                [32m✔[39m should attempt to fail
+              when the current Runnable has already passed
+                [32m✔[39m should fail with the current Runnable and the error
+                [32m✔[39m should abort the runner without emitting end event
+              when the current Runnable is still running
+                when the current Runnable is a Test
+                  [32m✔[39m should run callback(err) to handle failing and hooks
+                  [32m✔[39m should not notify test has ended
+                  [32m✔[39m should not notify run has ended
+                when the current Runnable is a Hook
+                  [32m✔[39m should run callback(err) to handle failing hook pattern
+                  [32m✔[39m should not notify test has ended
+                  [32m✔[39m should not notify run has ended
+      linkPartialObjects()
+        [32m✔[39m should return the Runner
+      isParallelMode()
+        [32m✔[39m should return false
+      workerReporter()
+        [32m✔[39m should throw
+
+  Suite
+    instance method
+      clone()
+        [32m✔[39m should clone the Suite, omitting children
+      reset()
+        [32m✔[39m should reset the `delayed` state
+        [32m✔[39m should forward reset to suites and tests
+        [32m✔[39m should forward reset to all hooks
+      timeout()
+        when no argument is passed
+          [32m✔[39m should return the timeout value
+        when argument is passed
+          [32m✔[39m should return the Suite object
+      slow()
+        when given a string
+          [32m✔[39m should parse it
+        when no argument is passed
+          [32m✔[39m should return the slow value
+        when argument is passed
+          [32m✔[39m should return the Suite object
+      bail()
+        when no argument is passed
+          [32m✔[39m should return the bail value
+        when argument is passed
+          [32m✔[39m should return the Suite object
+      beforeAll()
+        wraps the passed in function in a Hook
+          [32m✔[39m adds it to _beforeAll
+          [32m✔[39m appends title to hook
+          [32m✔[39m uses function name if available
+      afterAll()
+        wraps the passed in function in a Hook
+          [32m✔[39m adds it to _afterAll
+          [32m✔[39m appends title to hook
+          [32m✔[39m uses function name if available
+      beforeEach()
+        wraps the passed in function in a Hook
+          [32m✔[39m adds it to _beforeEach
+          [32m✔[39m appends title to hook
+          [32m✔[39m uses function name if available
+        when the suite is pending
+          [32m✔[39m should not create a hook
+      afterEach()
+        wraps the passed in function in a Hook
+          [32m✔[39m adds it to _afterEach
+          [32m✔[39m appends title to hook
+          [32m✔[39m uses function name if available
+      create()
+        [32m✔[39m does not create a second root suite
+        [32m✔[39m does not denote the root suite by being titleless
+      addSuite()
+        [32m✔[39m sets the parent on the added Suite
+        [32m✔[39m copies the timeout value
+        [32m✔[39m copies the slow value
+        [32m✔[39m adds the suite to the suites collection
+        [32m✔[39m treats suite as pending if its parent is pending
+      addTest()
+        [32m✔[39m sets the parent on the added test
+        [32m✔[39m copies the timeout value
+        [32m✔[39m adds the test to the tests collection
+      fullTitle()
+        when there is no parent
+          [32m✔[39m returns the suite title
+        when there is a parent
+          [32m✔[39m returns the combination of parent's and suite's title
+      titlePath()
+        when there is no parent
+          [32m✔[39m returns the suite title
+        when there is a parent
+          the parent is the root suite
+            [32m✔[39m returns the suite title
+          the parent is not the root suite
+            [32m✔[39m returns the concatenation of parent's and suite's title
+      total()
+        when there are no nested suites or tests
+          [32m✔[39m should return 0
+        when there are several tests in the suite
+          [32m✔[39m should return the number
+      eachTest(fn)
+        when there are no nested suites or tests
+          [32m✔[39m should return 0
+        when there are several tests in the suite
+          [32m✔[39m should return the number
+        when there are several levels of nested suites
+          [32m✔[39m should return the number
+      constructor
+        [32m✔[39m should throw an error if the title isn't a string
+        [32m✔[39m should not throw if the title is a string
+      timeout()
+        [32m✔[39m should convert a string to milliseconds
+      hasOnly()
+        [32m✔[39m should return true if a test has `only`
+        [32m✔[39m should return true if a suite has `only`
+        [32m✔[39m should return true if nested suite has `only`
+        [32m✔[39m should return false if no suite or test is marked `only`
+      filterOnly()
+        [32m✔[39m should filter out all other tests and suites if a test has `only`
+        [32m✔[39m should filter out all other tests and suites if a suite has `only`
+      markOnly()
+        [32m✔[39m should call appendOnlySuite on parent
+
+  Test
+    initialization
+      [32m✔[39m should throw an error if the title isn't a string
+      [32m✔[39m should not throw if the title is a string
+
+  Test
+    .clone()
+      [32m✔[39m should copy the title
+      [32m✔[39m should copy the timeout value
+      [32m✔[39m should copy the slow value
+      [32m✔[39m should copy the retries value
+      [32m✔[39m should copy the currentRetry value
+      [32m✔[39m should add/keep the retriedTest value
+      [32m✔[39m should copy the globals value
+      [32m✔[39m should copy the parent value
+      [32m✔[39m should copy the file value
+    .reset()
+      [32m✔[39m should reset the run state
+      [32m✔[39m should call Runnable.reset
+    .isPending()
+      [32m✔[39m should not be pending by default
+      [32m✔[39m should be pending when marked as such
+      [32m✔[39m should be pending when its parent is pending
+    .markOnly()
+      [32m✔[39m should call appendOnlyTest on parent
+
+  a test that throws
+    non-extensible
+      [32m✔[39m should not pass if throwing sync and test is sync
+      [32m✔[39m should not pass if throwing sync and test is async
+      [32m✔[39m should not pass if throwing async and test is async
+    undefined
+      [32m✔[39m should not pass if throwing sync and test is sync
+      [32m✔[39m should not pass if throwing sync and test is async
+(node:7497) MaxListenersExceededWarning: Possible EventEmitter memory leak detected. 11 unhandledRejection listeners added to [process]. MaxListeners is 10. Use emitter.setMaxListeners() to increase limit
+(Use `node --trace-warnings ...` to show where the warning was created)
+      [32m✔[39m should not pass if throwing async and test is async
+    null
+      [32m✔[39m should not pass if throwing sync and test is sync
+      [32m✔[39m should not pass if throwing sync and test is async
+      [32m✔[39m should not pass if throwing async and test is async
+    stack
+      [32m✔[39m should include the stack when throwing async
+
+  timeouts
+    [32m✔[39m should error on timeout
+    [32m✔[39m should allow overriding per-test (50ms)
+    chaining calls
+      suite-level
+        should override for inner test cases and deeply nested suites
+          [32m✔[39m inner test (1001ms)
+          nested suite
+            [32m✔[39m nested test (2201ms)
+    disabling
+      [32m✔[39m should work with timeout(0)
+      using beforeEach
+        [32m✔[39m should work with timeout(0)
+      using before
+        [32m✔[39m should work with timeout(0)
+      using timeout(0)
+        [32m✔[39m should suppress timeout(4)
+      suite-level
+        [32m✔[39m should work with timeout(0)
+        nested suite
+          [32m✔[39m should work with timeout(0)
+      chaining calls
+        [32m✔[39m should allow overriding via chaining (50ms)
+        suite-level
+          [32m✔[39m should work with timeout(0)
+          nested suite
+            [32m✔[39m should work with timeout(0)
+
+  lib/utils
+    clean()
+      [32m✔[39m should remove the wrapping function declaration
+      [32m✔[39m should handle newlines in the function declaration
+      [32m✔[39m should remove space character indentation from the function body
+      [32m✔[39m should remove tab character indentation from the function body
+      [32m✔[39m should handle functions with tabs in their declarations
+      [32m✔[39m should handle named functions without space after name
+      [32m✔[39m should handle named functions with space after name
+      [32m✔[39m should handle functions with no space between the end and the closing brace
+      [32m✔[39m should handle functions with parentheses in the same line
+      [32m✔[39m should handle empty functions
+      [32m✔[39m should format a single line test function
+      [32m✔[39m should format a multi line test indented with spaces
+      [32m✔[39m should format a multi line test indented with tabs
+      [32m✔[39m should format functions saved in windows style - spaces
+      [32m✔[39m should format functions saved in windows style - tabs
+      [32m✔[39m should format es6 arrow functions
+      [32m✔[39m should format es6 arrow functions with implicit return
+    stringify()
+      [32m✔[39m should return an object representation of a string created with a String constructor
+      [32m✔[39m should return Buffer with .toJSON representation
+      [32m✔[39m should return Date object with .toISOString() + string prefix
+      [32m✔[39m should return invalid Date object with .toString() + string prefix
+      [32m✔[39m should canonicalize the object
+      [32m✔[39m should handle circular structures in objects
+      [32m✔[39m should handle circular structures in arrays
+      [32m✔[39m should handle circular structures in functions
+      [32m✔[39m should handle various non-undefined, non-null, non-object, non-array, non-date, and non-function values
+      [32m✔[39m should handle arrays
+      [32m✔[39m should handle functions
+      [32m✔[39m should handle empty objects
+      [32m✔[39m should handle empty arrays
+      [32m✔[39m should handle non-empty arrays
+      [32m✔[39m should handle empty functions (with no properties)
+      [32m✔[39m should handle functions w/ properties
+      [32m✔[39m should handle undefined values
+      [32m✔[39m should recurse
+      [32m✔[39m might get confusing
+      [32m✔[39m should not freak out if it sees a primitive twice
+      [32m✔[39m should stringify dates
+      [32m✔[39m should handle object without an Object prototype
+      [32m✔[39m should handle Symbol
+      [32m✔[39m should handle length properties that cannot be coerced to a number
+      #Number
+        [32m✔[39m should show the handle -0 situations
+        [32m✔[39m should work well with `NaN` and `Infinity`
+        [32m✔[39m floats and ints
+        [32m✔[39m should work with bigints when possible
+      canonicalize example
+        [32m✔[39m should represent the actual full result
+        should represent null prototypes
+          [32m✔[39m Without properties
+          [32m✔[39m With explicit names
+          [32m✔[39m Without names
+    type()
+      [32m✔[39m should recognize various types
+      when toString on null or undefined stringifies window
+        [32m✔[39m should recognize null and undefined
+    canonicalType()
+      [32m✔[39m should recognize various types
+      when toString on null or undefined stringifies window
+        [32m✔[39m should recognize null and undefined
+    isPromise()
+      [32m✔[39m should return true if the value is Promise-ish
+      [32m✔[39m should return false if the value is not an object
+      [32m✔[39m should return false if the value is an object w/o a "then" function
+      [32m✔[39m should return false if the object is null
+    escape()
+      [32m✔[39m coerces null to a string before escaping
+      [32m✔[39m coerces undefined to a string before escaping
+      [32m✔[39m coerces number to a string before escaping
+      [32m✔[39m coerces boolean to a string before escaping
+      [32m✔[39m coerces object to a string before escaping
+      [32m✔[39m leaves safe ascii alphanumeric unchanged
+      [32m✔[39m leaves safe ascii safe punctuation unchanged
+      [32m✔[39m replaces less-than signs with uppercase hexadecimal references
+      [32m✔[39m replaces greater-than signs with uppercase hexadecimal references
+      [32m✔[39m replaces double quotes with uppercase hexadecimal references
+      [32m✔[39m replaces ampersands with uppercase hexadecimal references
+      [32m✔[39m replaces existing entities with uppercase hexadecimal references
+      [32m✔[39m replaces all sensitive punctuation with uppercase hexadecimal references
+      [32m✔[39m handles C0 control nul
+      [32m✔[39m handles C0 control start of heading
+      [32m✔[39m handles C0 control start of text
+      [32m✔[39m handles C0 control end of text
+      [32m✔[39m handles C0 control end of transmission
+      [32m✔[39m handles C0 control enquiry
+      [32m✔[39m handles C0 control acknowledge
+      [32m✔[39m handles C0 control bell
+      [32m✔[39m handles C0 control backspace
+      [32m✔[39m handles C0 control tab
+      [32m✔[39m handles C0 control line feed
+      [32m✔[39m handles C0 control vertical tab
+      [32m✔[39m handles C0 control form feed
+      [32m✔[39m handles C0 control carriage return
+      [32m✔[39m handles C0 control shift out
+      [32m✔[39m handles C0 control shift in
+      [32m✔[39m handles C0 control data link escape
+      [32m✔[39m handles C0 control device control one
+      [32m✔[39m handles C0 control device control two
+      [32m✔[39m handles C0 control device control three
+      [32m✔[39m handles C0 control device control four
+      [32m✔[39m handles C0 control negative acknowledge
+      [32m✔[39m handles C0 control synchronous idle
+      [32m✔[39m handles C0 control end transmission block
+      [32m✔[39m handles C0 control cancel
+      [32m✔[39m handles C0 control end of medium
+      [32m✔[39m handles C0 control substitute
+      [32m✔[39m handles C0 control escape
+      [32m✔[39m handles C0 control file separator
+      [32m✔[39m handles C0 control group separator
+      [32m✔[39m handles C0 control record separator
+      [32m✔[39m handles C0 control unit separator
+      [32m✔[39m handles C1 control delete
+      [32m✔[39m handles C1 control padding character
+      [32m✔[39m handles C1 control high octet preset
+      [32m✔[39m handles C1 control partial line backward
+      [32m✔[39m handles C1 control reverse line feed
+      [32m✔[39m handles C1 control single shift two
+      [32m✔[39m handles C1 control single shift three
+      [32m✔[39m handles C1 control device control string
+      [32m✔[39m handles C1 control private use one
+      [32m✔[39m handles C1 control string terminator
+      [32m✔[39m handles C1 control operating system command
+      [32m✔[39m handles C1 control privacy message
+      [32m✔[39m handles C1 control application program command
+      [32m✔[39m replaces non-ascii unicode copyright sign
+      [32m✔[39m replaces non-ascii unicode latin small e acute
+      [32m✔[39m replaces non-ascii unicode em dash
+      [32m✔[39m replaces non-ascii unicode CJK character
+      [32m✔[39m replaces non-ascii unicode replacement character
+      [32m✔[39m replaces non-ascii unicode noncharacter FFFE
+      [32m✔[39m replaces non-ascii unicode noncharacter FFFF
+      [32m✔[39m replaces astral unicode pile of poo as one code point
+      [32m✔[39m replaces astral unicode grinning face as one code point
+      [32m✔[39m replaces astral unicode tetragram as one code point
+      [32m✔[39m replaces astral unicode CJK extension as one code point
+      [32m✔[39m replaces lone high surrogate
+      [32m✔[39m replaces lone low surrogate
+      [32m✔[39m replaces high surrogate between ascii
+      [32m✔[39m replaces low surrogate between ascii
+      [32m✔[39m does not rely on he as a runtime dependency
+      [32m✔[39m replaces ansi color escapes
+      [32m✔[39m replaces ascii whitespace controls
+      [32m✔[39m replaces mixed null and C1 controls
+      [32m✔[39m replaces unpaired surrogates without consuming neighboring characters
+      [32m✔[39m escapes mixed reporter content in order
+    createMap()
+      [32m✔[39m should return an object with a null prototype
+      [32m✔[39m should add props to the object
+      [32m✔[39m should add props from all object parameters to the object
+    slug()
+      [32m✔[39m should convert the string to lowercase
+      [32m✔[39m should convert whitespace to dashes
+      [32m✔[39m should strip non-alphanumeric and non-dash characters
+      [32m✔[39m should disallow consecutive dashes
+    castArray()
+      when provided an array value
+        [32m✔[39m should return a copy of the array
+      when provided an "arguments" value
+        [32m✔[39m should return an array containing the arguments
+      when provided an object
+        [32m✔[39m should return an array containing the object only
+      when provided no parameters
+        [32m✔[39m should return an empty array
+      when provided a primitive value
+        [32m✔[39m should return an array containing the primitive value only
+      when provided null
+        [32m✔[39m should return an array containing a null value only
+    uniqueID()
+      [32m✔[39m should return a non-empty string
+      [32m✔[39m should have length of 21
+
+  class BufferedWorkerPool
+    static method
+      create()
+        [32m✔[39m should return a BufferedWorkerPool instance
+        when passed no arguments
+          [32m✔[39m should not throw
+      serializeOptions()
+        [32m✔[39m should return a serialized string
+        when passed no arguments
+          [32m✔[39m should not throw
+        when called multiple times with the same object
+          [32m✔[39m should not perform serialization twice
+          [32m✔[39m should return the same value
+    constructor
+      [32m✔[39m should apply defaults
+    instance method
+      stats()
+        [32m✔[39m should return the object returned by `workerpool.Pool#stats`
+      run()
+        [32m✔[39m should serialize the options object
+        [32m✔[39m should deserialize the result
+        when passed no arguments
+          [32m✔[39m should reject
+        when passed a non-string filepath
+          [32m✔[39m should reject
+      terminate()
+        when called with `force`
+          [32m✔[39m should delegate to the underlying pool w/ "force" behavior
+        when called without `force`
+          [32m✔[39m should delegate to the underlying pool w/o "force" behavior
+
+  cli
+    main()
+      [32m✔[39m prints version and exits for --version
+      [32m✔[39m prints help and exits for --help
+
+  cli/config
+    loadConfig()
+      when parsing succeeds
+        when supplied a filepath with ".cjs" extension
+          [32m✔[39m should use the JS parser
+        when supplied a filepath with ".js" extension
+          [32m✔[39m should use the JS parser
+        when supplied a filepath with ".json" extension
+          [32m✔[39m should use the JSON parser
+        when supplied a filepath with ".jsonc" extension
+          [32m✔[39m should use the JSON parser
+        when supplied a filepath with ".mjs" extension
+          [32m✔[39m should use the JS parser
+        when supplied a filepath with ".yaml" extension
+          [32m✔[39m should use the YAML parser
+        when supplied a filepath with ".yml" extension
+          [32m✔[39m should use the YAML parser
+      when supplied a filepath with unsupported extension
+        [32m✔[39m should use the JSON parser
+      when config file parsing fails
+        [32m✔[39m should throw
+    findConfig()
+      [32m✔[39m should look for one of the config files using findup-sync
+      [32m✔[39m should support an explicit `cwd`
+      [32m✔[39m should call findup-sync with all config filename args in order
+      [32m✔[39m should not make extra calls once an item is found
+      [32m✔[39m should return undefined if no item is found
+    parsers()
+      [32m✔[39m should print error message for faulty require
+      [32m✔[39m should print error message for non-existing file
+
+  mocha-flags
+    expectedTypeForFlag()
+      [32m✔[39m returns expected extension's type as array
+      [32m✔[39m returns expected file's type as array
+      [32m✔[39m returns expected global's type as array
+      [32m✔[39m returns expected ignore's type as array
+      [32m✔[39m returns expected node-option's type as array
+      [32m✔[39m returns expected reporter-option's type as array
+      [32m✔[39m returns expected require's type as array
+      [32m✔[39m returns expected spec's type as array
+      [32m✔[39m returns expected watch-files's type as array
+      [32m✔[39m returns expected watch-ignore's type as array
+      [32m✔[39m returns expected allow-uncaught's type as boolean
+      [32m✔[39m returns expected async-only's type as boolean
+      [32m✔[39m returns expected bail's type as boolean
+      [32m✔[39m returns expected check-leaks's type as boolean
+      [32m✔[39m returns expected clear-screen's type as boolean
+      [32m✔[39m returns expected color's type as boolean
+      [32m✔[39m returns expected delay's type as boolean
+      [32m✔[39m returns expected diff's type as boolean
+      [32m✔[39m returns expected dry-run's type as boolean
+      [32m✔[39m returns expected exit's type as boolean
+      [32m✔[39m returns expected fail-hook-affected-tests's type as boolean
+      [32m✔[39m returns expected pass-on-failing-test-suite's type as boolean
+      [32m✔[39m returns expected fail-zero's type as boolean
+      [32m✔[39m returns expected forbid-only's type as boolean
+      [32m✔[39m returns expected forbid-pending's type as boolean
+      [32m✔[39m returns expected full-trace's type as boolean
+      [32m✔[39m returns expected inline-diffs's type as boolean
+      [32m✔[39m returns expected invert's type as boolean
+      [32m✔[39m returns expected list-interfaces's type as boolean
+      [32m✔[39m returns expected list-reporters's type as boolean
+      [32m✔[39m returns expected no-colors's type as boolean
+      [32m✔[39m returns expected parallel's type as boolean
+      [32m✔[39m returns expected posix-exit-codes's type as boolean
+      [32m✔[39m returns expected recursive's type as boolean
+      [32m✔[39m returns expected sort's type as boolean
+      [32m✔[39m returns expected watch's type as boolean
+      [32m✔[39m returns expected retries's type as number
+      [32m✔[39m returns expected jobs's type as number
+      [32m✔[39m returns expected config's type as string
+      [32m✔[39m returns expected fgrep's type as string
+      [32m✔[39m returns expected grep's type as string
+      [32m✔[39m returns expected package's type as string
+      [32m✔[39m returns expected reporter's type as string
+      [32m✔[39m returns expected ui's type as string
+      [32m✔[39m returns expected slow's type as string
+      [32m✔[39m returns expected timeout's type as string
+      [32m✔[39m returns undefined for node flags
+      [32m✔[39m returns undefined for unsupported flags
+    getRunOptionDefinitions()
+      [32m✔[39m gives extension a description
+      [32m✔[39m gives file a description
+      [32m✔[39m gives global a description
+      [32m✔[39m gives ignore a description
+      [32m✔[39m gives node-option a description
+      [32m✔[39m gives reporter-option a description
+      [32m✔[39m gives require a description
+      [32m✔[39m gives watch-files a description
+      [32m✔[39m gives watch-ignore a description
+      [32m✔[39m gives allow-uncaught a description
+      [32m✔[39m gives async-only a description
+      [32m✔[39m gives bail a description
+      [32m✔[39m gives check-leaks a description
+      [32m✔[39m gives clear-screen a description
+      [32m✔[39m gives color a description
+      [32m✔[39m gives delay a description
+      [32m✔[39m gives diff a description
+      [32m✔[39m gives dry-run a description
+      [32m✔[39m gives exit a description
+      [32m✔[39m gives fail-hook-affected-tests a description
+      [32m✔[39m gives pass-on-failing-test-suite a description
+      [32m✔[39m gives fail-zero a description
+      [32m✔[39m gives forbid-only a description
+      [32m✔[39m gives forbid-pending a description
+      [32m✔[39m gives full-trace a description
+      [32m✔[39m gives inline-diffs a description
+      [32m✔[39m gives invert a description
+      [32m✔[39m gives list-interfaces a description
+      [32m✔[39m gives list-reporters a description
+      [32m✔[39m gives no-colors a description
+      [32m✔[39m gives parallel a description
+      [32m✔[39m gives posix-exit-codes a description
+      [32m✔[39m gives recursive a description
+      [32m✔[39m gives sort a description
+      [32m✔[39m gives watch a description
+      [32m✔[39m gives retries a description
+      [32m✔[39m gives jobs a description
+      [32m✔[39m gives config a description
+      [32m✔[39m gives fgrep a description
+      [32m✔[39m gives grep a description
+      [32m✔[39m gives package a description
+      [32m✔[39m gives reporter a description
+      [32m✔[39m gives ui a description
+      [32m✔[39m gives slow a description
+      [32m✔[39m gives timeout a description
+
+  node-flags
+    isNodeFlag()
+      for all allowed node environment flags
+        [32m✔[39m --report-uncaught-exception should return true
+        [32m✔[39m --no-report-uncaught-exception should return true
+        [32m✔[39m --cpu-prof-name should return true
+        [32m✔[39m --max-http-header-size should return true
+        [32m✔[39m --redirect-warnings should return true
+        [32m✔[39m --heap-prof should return true
+        [32m✔[39m --no-heap-prof should return true
+        [32m✔[39m --test-coverage-include should return true
+        [32m✔[39m --cpu-prof-dir should return true
+        [32m✔[39m --report-on-signal should return true
+        [32m✔[39m --no-report-on-signal should return true
+        [32m✔[39m --heap-prof-interval should return true
+        [32m✔[39m --cpu-prof-interval should return true
+        [32m✔[39m --cpu-prof should return true
+        [32m✔[39m --no-cpu-prof should return true
+        [32m✔[39m --trace-tls should return true
+        [32m✔[39m --no-trace-tls should return true
+        [32m✔[39m --permission should return true
+        [32m✔[39m --no-permission should return true
+        [32m✔[39m --experimental-loader should return true
+        [32m✔[39m --test-coverage-functions should return true
+        [32m✔[39m --heapsnapshot-signal should return true
+        [32m✔[39m --experimental-sqlite should return true
+        [32m✔[39m --no-experimental-sqlite should return true
+        [32m✔[39m --entry-url should return true
+        [32m✔[39m --no-entry-url should return true
+        [32m✔[39m --trace-atomics-wait should return true
+        [32m✔[39m --no-trace-atomics-wait should return true
+        [32m✔[39m --experimental-detect-module should return true
+        [32m✔[39m --no-experimental-detect-module should return true
+        [32m✔[39m --allow-addons should return true
+        [32m✔[39m --no-allow-addons should return true
+        [32m✔[39m --experimental-global-webcrypto should return true
+        [32m✔[39m --no-experimental-global-webcrypto should return true
+        [32m✔[39m --http-parser should return true
+        [32m✔[39m --experimental-fetch should return true
+        [32m✔[39m --no-experimental-fetch should return true
+        [32m✔[39m --trace-promises should return true
+        [32m✔[39m --no-trace-promises should return true
+        [32m✔[39m --experimental-abortcontroller should return true
+        [32m✔[39m --experimental-report should return true
+        [32m✔[39m --experimental-modules should return true
+        [32m✔[39m --test-skip-pattern should return true
+        [32m✔[39m --disable-sigusr1 should return true
+        [32m✔[39m --no-disable-sigusr1 should return true
+        [32m✔[39m --allow-wasi should return true
+        [32m✔[39m --no-allow-wasi should return true
+        [32m✔[39m --test-coverage-exclude should return true
+        [32m✔[39m --expose-gc should return true
+        [32m✔[39m --diagnostic-dir should return true
+        [32m✔[39m --force-async-hooks-checks should return true
+        [32m✔[39m --no-force-async-hooks-checks should return true
+        [32m✔[39m --allow-fs-read should return true
+        [32m✔[39m --allow-child-process should return true
+        [32m✔[39m --no-allow-child-process should return true
+        [32m✔[39m --experimental-async-context-frame should return true
+        [32m✔[39m --no-experimental-async-context-frame should return true
+        [32m✔[39m --experimental-vm-modules should return true
+        [32m✔[39m --no-experimental-vm-modules should return true
+        [32m✔[39m --experimental-wasi-unstable-preview1 should return true
+        [32m✔[39m --inspect-publish-uid should return true
+        [32m✔[39m --inspect-brk should return true
+        [32m✔[39m --no-inspect-brk should return true
+        [32m✔[39m --experimental-require-module should return true
+        [32m✔[39m --no-experimental-require-module should return true
+        [32m✔[39m --inspect should return true
+        [32m✔[39m --no-inspect should return true
+        [32m✔[39m --inspect-port should return true
+        [32m✔[39m --test-only should return true
+        [32m✔[39m --no-test-only should return true
+        [32m✔[39m --dns-result-order should return true
+        [32m✔[39m --network-family-autoselection should return true
+        [32m✔[39m --no-network-family-autoselection should return true
+        [32m✔[39m --report-signal should return true
+        [32m✔[39m --abort-on-uncaught-exception should return true
+        [32m✔[39m --max-old-space-size should return true
+        [32m✔[39m --enable-etw-stack-walking should return true
+        [32m✔[39m --perf-basic-prof should return true
+        [32m✔[39m --deprecation should return true
+        [32m✔[39m --no-deprecation should return true
+        [32m✔[39m --tls-min-v1.0 should return true
+        [32m✔[39m --no-tls-min-v1.0 should return true
+        [32m✔[39m --napi-modules should return true
+        [32m✔[39m --throw-deprecation should return true
+        [32m✔[39m --no-throw-deprecation should return true
+        [32m✔[39m --trace-deprecation should return true
+        [32m✔[39m --no-trace-deprecation should return true
+        [32m✔[39m --heap-prof-dir should return true
+        [32m✔[39m --experimental-default-type should return true
+        [32m✔[39m --trace-env-native-stack should return true
+        [32m✔[39m --no-trace-env-native-stack should return true
+        [32m✔[39m --report-exclude-network should return true
+        [32m✔[39m --no-report-exclude-network should return true
+        [32m✔[39m --allow-worker should return true
+        [32m✔[39m --no-allow-worker should return true
+        [32m✔[39m --secure-heap-min should return true
+        [32m✔[39m --disable-wasm-trap-handler should return true
+        [32m✔[39m --no-disable-wasm-trap-handler should return true
+        [32m✔[39m --snapshot-blob should return true
+        [32m✔[39m --unhandled-rejections should return true
+        [32m✔[39m --no-watch should return true
+        [32m✔[39m --experimental-json-modules should return true
+        [32m✔[39m --openssl-shared-config should return true
+        [32m✔[39m --no-openssl-shared-config should return true
+        [32m✔[39m --conditions should return true
+        [32m✔[39m --watch-path should return true
+        [32m✔[39m --tls-cipher-list should return true
+        [32m✔[39m --disable-proto should return true
+        [32m✔[39m --zero-fill-buffers should return true
+        [32m✔[39m --no-zero-fill-buffers should return true
+        [32m✔[39m --experimental-top-level-await should return true
+        [32m✔[39m --experimental-webstorage should return true
+        [32m✔[39m --no-experimental-webstorage should return true
+        [32m✔[39m --openssl-legacy-provider should return true
+        [32m✔[39m --no-openssl-legacy-provider should return true
+        [32m✔[39m --v8-pool-size should return true
+        [32m✔[39m --force-fips should return true
+        [32m✔[39m --no-force-fips should return true
+        [32m✔[39m --experimental-shadow-realm should return true
+        [32m✔[39m --no-experimental-shadow-realm should return true
+        [32m✔[39m --test-reporter-destination should return true
+        [32m✔[39m --trace-env-js-stack should return true
+        [32m✔[39m --no-trace-env-js-stack should return true
+        [32m✔[39m --trace-event-file-pattern should return true
+        [32m✔[39m --trace-event-categories should return true
+        [32m✔[39m --network-family-autoselection-attempt-timeout should return true
+        [32m✔[39m --report-dir should return true
+        [32m✔[39m --addons should return true
+        [32m✔[39m --no-addons should return true
+        [32m✔[39m --node-memory-debug should return true
+        [32m✔[39m --experimental-specifier-resolution should return true
+        [32m✔[39m --trace-sync-io should return true
+        [32m✔[39m --no-trace-sync-io should return true
+        [32m✔[39m --debug-arraybuffer-allocations should return true
+        [32m✔[39m --no-debug-arraybuffer-allocations should return true
+        [32m✔[39m --report-compact should return true
+        [32m✔[39m --no-report-compact should return true
+        [32m✔[39m --disallow-code-generation-from-strings should return true
+        [32m✔[39m --title should return true
+        [32m✔[39m --trace-exit should return true
+        [32m✔[39m --no-trace-exit should return true
+        [32m✔[39m --tls-min-v1.3 should return true
+        [32m✔[39m --no-tls-min-v1.3 should return true
+        [32m✔[39m --experimental-websocket should return true
+        [32m✔[39m --no-experimental-websocket should return true
+        [32m✔[39m --enable-fips should return true
+        [32m✔[39m --no-enable-fips should return true
+        [32m✔[39m --report-on-fatalerror should return true
+        [32m✔[39m --no-report-on-fatalerror should return true
+        [32m✔[39m --huge-max-old-generation-size should return true
+        [32m✔[39m --node-snapshot should return true
+        [32m✔[39m --no-node-snapshot should return true
+        [32m✔[39m --icu-data-dir should return true
+        [32m✔[39m --report-filename should return true
+        [32m✔[39m --interpreted-frames-native-stack should return true
+        [32m✔[39m --trace-require-module should return true
+        [32m✔[39m --experimental-import-meta-resolve should return true
+        [32m✔[39m --no-experimental-import-meta-resolve should return true
+        [32m✔[39m --experimental-wasm-modules should return true
+        [32m✔[39m --no-experimental-wasm-modules should return true
+        [32m✔[39m --use-openssl-ca should return true
+        [32m✔[39m --no-use-openssl-ca should return true
+        [32m✔[39m --perf-basic-prof-only-functions should return true
+        [32m✔[39m --experimental-print-required-tla should return true
+        [32m✔[39m --no-experimental-print-required-tla should return true
+        [32m✔[39m --experimental-worker should return true
+        [32m✔[39m --use-bundled-ca should return true
+        [32m✔[39m --no-use-bundled-ca should return true
+        [32m✔[39m --test-shard should return true
+        [32m✔[39m --experimental-global-navigator should return true
+        [32m✔[39m --no-experimental-global-navigator should return true
+        [32m✔[39m --tls-min-v1.1 should return true
+        [32m✔[39m --no-tls-min-v1.1 should return true
+        [32m✔[39m --use-system-ca should return true
+        [32m✔[39m --no-use-system-ca should return true
+        [32m✔[39m --warnings should return true
+        [32m✔[39m --no-warnings should return true
+        [32m✔[39m --test-name-pattern should return true
+        [32m✔[39m --verify-base-objects should return true
+        [32m✔[39m --no-verify-base-objects should return true
+        [32m✔[39m --use-largepages should return true
+        [32m✔[39m --test-reporter should return true
+        [32m✔[39m --experimental-eventsource should return true
+        [32m✔[39m --no-experimental-eventsource should return true
+        [32m✔[39m --secure-heap should return true
+        [32m✔[39m --experimental-strip-types should return true
+        [32m✔[39m --no-experimental-strip-types should return true
+        [32m✔[39m --test-coverage-lines should return true
+        [32m✔[39m --trace-env should return true
+        [32m✔[39m --no-trace-env should return true
+        [32m✔[39m --experimental-repl-await should return true
+        [32m✔[39m --no-experimental-repl-await should return true
+        [32m✔[39m --openssl-config should return true
+        [32m✔[39m --trace-uncaught should return true
+        [32m✔[39m --no-trace-uncaught should return true
+        [32m✔[39m --trace-warnings should return true
+        [32m✔[39m --no-trace-warnings should return true
+        [32m✔[39m --watch-kill-signal should return true
+        [32m✔[39m --global-search-paths should return true
+        [32m✔[39m --no-global-search-paths should return true
+        [32m✔[39m --experimental-global-customevent should return true
+        [32m✔[39m --no-experimental-global-customevent should return true
+        [32m✔[39m --test-coverage-branches should return true
+        [32m✔[39m --trace-sigint should return true
+        [32m✔[39m --no-trace-sigint should return true
+        [32m✔[39m --import should return true
+        [32m✔[39m --localstorage-file should return true
+        [32m✔[39m --track-heap-objects should return true
+        [32m✔[39m --no-track-heap-objects should return true
+        [32m✔[39m --frozen-intrinsics should return true
+        [32m✔[39m --no-frozen-intrinsics should return true
+        [32m✔[39m --heap-prof-name should return true
+        [32m✔[39m --watch-preserve-output should return true
+        [32m✔[39m --no-watch-preserve-output should return true
+        [32m✔[39m --insecure-http-parser should return true
+        [32m✔[39m --no-insecure-http-parser should return true
+        [32m✔[39m --force-node-api-uncaught-exceptions-policy should return true
+        [32m✔[39m --no-force-node-api-uncaught-exceptions-policy should return true
+        [32m✔[39m --report-exclude-env should return true
+        [32m✔[39m --no-report-exclude-env should return true
+        [32m✔[39m --preserve-symlinks should return true
+        [32m✔[39m --no-preserve-symlinks should return true
+        [32m✔[39m --tls-max-v1.3 should return true
+        [32m✔[39m --no-tls-max-v1.3 should return true
+        [32m✔[39m --tls-keylog should return true
+        [32m✔[39m --pending-deprecation should return true
+        [32m✔[39m --no-pending-deprecation should return true
+        [32m✔[39m --tls-min-v1.2 should return true
+        [32m✔[39m --no-tls-min-v1.2 should return true
+        [32m✔[39m --stack-trace-limit should return true
+        [32m✔[39m --extra-info-on-fatal-exception should return true
+        [32m✔[39m --no-extra-info-on-fatal-exception should return true
+        [32m✔[39m --tls-max-v1.2 should return true
+        [32m✔[39m --no-tls-max-v1.2 should return true
+        [32m✔[39m --enable-source-maps should return true
+        [32m✔[39m --no-enable-source-maps should return true
+        [32m✔[39m --jitless should return true
+        [32m✔[39m --input-type should return true
+        [32m✔[39m --preserve-symlinks-main should return true
+        [32m✔[39m --no-preserve-symlinks-main should return true
+        [32m✔[39m --allow-fs-write should return true
+        [32m✔[39m --disable-warning should return true
+        [32m✔[39m --heapsnapshot-near-heap-limit should return true
+        [32m✔[39m --max-semi-space-size should return true
+        [32m✔[39m --force-context-aware should return true
+        [32m✔[39m --no-force-context-aware should return true
+        [32m✔[39m --perf-prof-unwinding-info should return true
+        [32m✔[39m --inspect-wait should return true
+        [32m✔[39m --no-inspect-wait should return true
+        [32m✔[39m --experimental-transform-types should return true
+        [32m✔[39m --no-experimental-transform-types should return true
+        [32m✔[39m --perf-prof should return true
+        [32m✔[39m --debug-port should return true
+        [32m✔[39m --enable-network-family-autoselection should return true
+        [32m✔[39m --prof-process should return true
+        [32m✔[39m --loader should return true
+        [32m✔[39m --experimental-permission should return true
+        [32m✔[39m --trace-events-enabled should return true
+        [32m✔[39m --es-module-specifier-resolution should return true
+        [32m✔[39m --report-directory should return true
+      for all allowed node env flags which conflict with mocha flags
+        [32m✔[39m --watch should return false
+        [32m✔[39m --require should return false
+        [32m✔[39m -C should return false
+        [32m✔[39m -r should return false
+      when expecting leading dashes
+        [32m✔[39m should require leading dashes
+      special cases
+        [32m✔[39m should return true for flags starting with "preserve-symlinks"
+        [32m✔[39m should return true for flags starting with "harmony-" or "harmony_"
+        [32m✔[39m should return true for flags starting with "trace-" or "trace_"
+        [32m✔[39m should return true for "harmony" itself
+        [32m✔[39m should return true for "gc-global"
+        [32m✔[39m should return true for "es-staging"
+        [32m✔[39m should return true for "use-strict"
+        [32m✔[39m should return true for flags starting with "--v8-"
+    impliesNoTimeouts()
+      [32m✔[39m should return true for inspect flags
+    isInspectorActive()
+      [32m✔[39m should return false if the inspector is not active
+      [32m✔[39m should return true if the inspector is active
+    unparseNodeFlags()
+      [32m✔[39m should handle single v8 flags
+      [32m✔[39m should handle multiple v8 flags
+
+  options
+    loadOptions()
+      when no parameter provided
+        [32m✔[39m should return an object containing positional args, defaults, and anti-reloading flags
+      when parameter provided
+        package.json
+          when path to package.json (`--package <path>`) is valid
+            [32m✔[39m should return merged options incl. package.json opts
+            [32m✔[39m should not try to find a package.json
+            [32m✔[39m should set package = false
+          when path to package.json (`--package <path>`) is invalid
+            [32m✔[39m should throw
+          when path to package.json unspecified
+            [32m✔[39m should return merged options incl. found package.json
+            [32m✔[39m should set package = false
+          when path to package.json unspecified and package.json exists but is invalid
+            [32m✔[39m should throw
+          when called with package = false (`--no-package`)
+            [32m✔[39m should return parsed args and default config
+            [32m✔[39m should not look for package.json
+            [32m✔[39m should set package = false
+        rc file
+          when called with config = false (`--no-config`)
+            [32m✔[39m should return parsed args, default config and package.json
+            [32m✔[39m should not attempt to load a config file
+            [32m✔[39m should not attempt to find a config file
+            [32m✔[39m should set config = false
+          when path to config (`--config <path>`) is invalid
+            [32m✔[39m should not look for a config
+            [32m✔[39m should attempt to load file at path
+            [32m✔[39m should throw to warn the user
+          when called with unspecified config
+            when an rc file would be found
+              [32m✔[39m should look for a config
+              [32m✔[39m should attempt to load file at found path
+              [32m✔[39m should set config = false
+            when an rc file would not be found
+              [32m✔[39m should look for a config
+              [32m✔[39m should not attempt to load a config file
+              [32m✔[39m should set config = false
+      reporter-option
+        [32m✔[39m should merge rc reporter options before CLI reporter options
+      env options
+        [32m✔[39m should parse flags from MOCHA_OPTIONS
+        [32m✔[39m should parse quoted flags from MOCHA_OPTIONS
+        [32m✔[39m should allow negative numeric values in MOCHA_OPTIONS
+        [32m✔[39m should allow dash-prefixed option values in MOCHA_OPTIONS
+      config priority
+        [32m✔[39m should prioritize package.json over defaults
+        [32m✔[39m should prioritize rc file over package.json
+        [32m✔[39m should prioritize args over rc file
+        [32m✔[39m should prioritize env over rc file
+      when called with a one-and-done arg
+        "help"
+          [32m✔[39m should return basic parsed arguments and flag
+        "h"
+          [32m✔[39m should return basic parsed arguments and flag
+        "version"
+          [32m✔[39m should return basic parsed arguments and flag
+        "V"
+          [32m✔[39m should return basic parsed arguments and flag
+        "list-interfaces"
+          [32m✔[39m should return basic parsed arguments and flag
+        "list-reporters"
+          [32m✔[39m should return basic parsed arguments and flag
+      "extension" handling
+        when user supplies "extension" option
+          [32m✔[39m should not concatenate the default value
+        when user does not supply "extension" option
+          [32m✔[39m should retain the default
+      "spec" handling
+        when user supplies "spec" in config and positional arguments
+          [32m✔[39m should place both - unsplitted - into the positional arguments array
+      "ignore" handling
+        [32m✔[39m should not split option values by comma
+      "numeric arguments"
+        [32m✔[39m throws UNSUPPORTED error when numeric option is passed to cli
+        [32m✔[39m throws INVALID_ARG_TYPE error when numeric argument is passed to mocha flag that does not accept numeric value
+        [32m✔[39m throws INVALID_ARG_TYPE error when incompatible flag does not have preceding "--"
+        [32m✔[39m shows correct flag in error when multiple mocha flags have numeric values
+        [32m✔[39m throws UNSUPPORTED error when numeric arg is passed to unsupported flag
+        [32m✔[39m does not throw error if numeric value is passed to a compatible mocha flag
+        [32m✔[39m does not throw error if numeric value is passed to a node options
+        [32m✔[39m does not throw error if numeric value is passed to string flag
+        [32m✔[39m does not throw error if numeric value is passed to an array flag
+        [32m✔[39m does not throw error if a positional file name begins with a number
+      when parsing throws a non-Mocha error
+        [32m✔[39m prints the error message and exits with code 1
+
+  parse-args
+    [32m✔[39m canonicalizes aliases and strips alias keys
+    [32m✔[39m canonicalizes single-character aliases with a long-option prefix
+    [32m✔[39m uses the last value for repeated scalar options across aliases
+    [32m✔[39m canonicalizes long aliases in equals form
+    [32m✔[39m splits, deduplicates, and preserves order for repeated array options
+    [32m✔[39m does not split glob array options on commas
+    [32m✔[39m replaces default array options before merging user config arrays
+    [32m✔[39m canonicalizes aliases from config objects
+    [32m✔[39m gives parsed args precedence over config objects
+    [32m✔[39m orders reporter-option values from lowest to highest priority source
+    [32m✔[39m preserves boolean negation including long alias negation
+    [32m✔[39m coerces known boolean options in equals form
+    [32m✔[39m coerces repeated number options to the last numeric value
+    [32m✔[39m preserves unknown option negation
+    [32m✔[39m keeps unknown options accepted in equals form
+    [32m✔[39m treats separated unknown option values as positionals
+    [32m✔[39m treats the option terminator as the start of positionals
+    [32m✔[39m accepts dash-prefixed option values in equals form
+    [32m✔[39m rejects dash-prefixed option values in separated form
+    [32m✔[39m accepts negative numeric option values in separated form
+    [32m✔[39m accepts negative numeric option values from strings
+    [32m✔[39m accepts decimal and exponential negative numeric option values
+    [32m✔[39m parses double-quoted arguments from strings
+    [32m✔[39m parses single-quoted arguments from strings
+    [32m✔[39m parses quoted values attached to options from strings
+    [32m✔[39m preserves empty quoted option values from strings
+    [32m✔[39m parses escaped spaces and quotes from strings
+    [32m✔[39m splits arguments on all spaces and tabs
+    [32m✔[39m accepts unterminated quoted arguments
+    [32m✔[39m preserves directly-passed Node and V8 flags
+    [32m✔[39m uses the last value for repeated directly-passed Node and V8 flags
+    [32m✔[39m uses native short option grouping behavior
+    [32m✔[39m preserves numeric positional argument errors
+    [32m✔[39m throws an unsupported error for a bare numeric positional argument
+    [32m✔[39m accepts a space-delimited string of arguments
+    [32m✔[39m treats an empty string of arguments as no arguments
+    [32m✔[39m ignores falsy config objects while merging the rest
+    [32m✔[39m merges positional arguments across multiple config objects
+    [32m✔[39m keeps a non-boolean value for a boolean option given in equals form
+
+  helpers
+    validateLegacyPlugin()
+      when used with "reporter" key
+        [32m✔[39m should disallow an array of names
+        [32m✔[39m should fail to recognize an unknown reporter
+      when used with an "ui" key
+        [32m✔[39m should disallow an array of names
+        [32m✔[39m should fail to recognize an unknown interface
+      when used with an unknown plugin type
+        [32m✔[39m should fail
+      when used with a third-party interface
+        [32m✔[39m should add the interface to "Mocha.interfaces"
+      when a plugin throws an exception upon load
+        [32m✔[39m should fail and report the original error
+        [32m✔[39m should fail and report the original "MODULE_NOT_FOUND" error.message
+    list()
+      when provided a flat array
+        [32m✔[39m should return a flat array
+      when provided a nested array
+        [32m✔[39m should return a flat array
+      when given a comma-delimited string
+        [32m✔[39m should return a flat array
+
+  command
+    run
+      option metadata
+        number type
+          [32m✔[39m should include option retries
+          [32m✔[39m should include option jobs
+        string type
+          [32m✔[39m should include option config
+          [32m✔[39m should include option fgrep
+          [32m✔[39m should include option grep
+          [32m✔[39m should include option package
+          [32m✔[39m should include option reporter
+          [32m✔[39m should include option ui
+          [32m✔[39m should include option slow
+          [32m✔[39m should include option timeout
+        boolean type
+          [32m✔[39m should include option allow-uncaught
+          [32m✔[39m should include option async-only
+          [32m✔[39m should include option bail
+          [32m✔[39m should include option check-leaks
+          [32m✔[39m should include option clear-screen
+          [32m✔[39m should include option color
+          [32m✔[39m should include option delay
+          [32m✔[39m should include option diff
+          [32m✔[39m should include option dry-run
+          [32m✔[39m should include option exit
+          [32m✔[39m should include option fail-hook-affected-tests
+          [32m✔[39m should include option pass-on-failing-test-suite
+          [32m✔[39m should include option fail-zero
+          [32m✔[39m should include option forbid-only
+          [32m✔[39m should include option forbid-pending
+          [32m✔[39m should include option full-trace
+          [32m✔[39m should include option inline-diffs
+          [32m✔[39m should include option invert
+          [32m✔[39m should include option list-interfaces
+          [32m✔[39m should include option list-reporters
+          [32m✔[39m should include option no-colors
+          [32m✔[39m should include option parallel
+          [32m✔[39m should include option posix-exit-codes
+          [32m✔[39m should include option recursive
+          [32m✔[39m should include option sort
+          [32m✔[39m should include option watch
+        array type
+          [32m✔[39m should include option extension
+          [32m✔[39m should include option file
+          [32m✔[39m should include option global
+          [32m✔[39m should include option ignore
+          [32m✔[39m should include option node-option
+          [32m✔[39m should include option reporter-option
+          [32m✔[39m should include option require
+          [32m✔[39m should include option spec
+          [32m✔[39m should include option watch-files
+          [32m✔[39m should include option watch-ignore
+
+  validateRunOptions()
+    [32m✔[39m throws when multiple one-and-done options are provided
+    [32m✔[39m does not throw when no one-and-done option is provided
+
+  unparse-args
+    unparseNodeFlags()
+      [32m✔[39m unparses Node and V8 flags using equals for values
+      [32m✔[39m omits false and nullish Node and V8 flag values
+    unparseMochaArgs()
+      [32m✔[39m unparses positionals, booleans, scalars, and repeated arrays
+      [32m✔[39m emits positionals first regardless of object insertion order
+      [32m✔[39m omits absent positionals
+      [32m✔[39m keeps the value of an unrecognized option attached to its flag
+      [32m✔[39m unparses reporter-option object values in dotted form
+
+  esm-utils
+    requireOrImport
+      [32m✔[39m should show an informative error message for a broken default import
+      [32m✔[39m should show a syntax error message when importing a TypeScript file with invalid syntax
+      [32m✔[39m should surface the ts-node TSError error rather than falling back to `import(...)`
+      [32m✔[39m should surface Mocha errors rather than falling back to `import(...)`
+      [32m✔[39m should surface the require() error when import() fails on a directory specifier
+      [32m✔[39m should surface the import() error for a TypeScript file when the require() error is unrelated
+    loadFilesAsync()
+      [32m✔[39m should not decorate imported module if no decorator passed
+      [32m✔[39m should decorate imported module with passed decorator
+      [32m✔[39m should support file: URLs passed to loadFilesAsync
+      [32m✔[39m should treat Windows drive-letter paths as regular file paths
+      [32m✔[39m should throw for unsupported URL protocols
+
+  merge-coverage
+    [32m✔[39m should combine reports of the same file from every job (68ms)
+    [32m✔[39m should fail when no reports were collected (64ms)
+    [32m✔[39m should fail when the reports contain no coverage data (65ms)
+
+  Mocha
+    instance method
+      parallelMode()
+        when `Mocha` is running in Node.js
+          [32m✔[39m should return the Mocha instance
+          when parallel mode is already enabled
+            [32m✔[39m should not swap the Runner, nor change lazy loading setting
+          when parallel mode is already disabled
+            [32m✔[39m should not swap the Runner, nor change lazy loading setting
+          when `Mocha` instance in serial mode
+            when passed `true` value
+              when `Mocha` instance is in `INIT` state
+                [32m✔[39m should enable parallel mode
+              when `Mocha` instance is not in `INIT` state
+                [32m✔[39m should throw
+            when passed non-`true` value
+              when `Mocha` instance is in `INIT` state
+                [32m✔[39m should enable serial mode
+      addFile()
+        [32m✔[39m should add the given file to the files array
+        [32m✔[39m should be chainable
+      loadFiles()
+        [32m✔[39m should load all files from the files array
+        [32m✔[39m should execute the optional callback if given
+      loadFilesAsync()
+        [32m✔[39m should pass esmDecorator to actual load function
+      unloadFiles()
+        [32m✔[39m should delegate Mocha.unloadFile() for each item in its list of files
+        [32m✔[39m should be chainable
+      reporter()
+        when a reporter exists relative to the cwd
+          [32m✔[39m should load from current working directory
+          when the reporter throws upon load
+            [32m✔[39m should throw "invalid reporter" exception
+        when a reporter exists relative to the "mocha" module path
+          [32m✔[39m should load from module path
+          when the reporter throws upon load
+            [32m✔[39m should throw "invalid reporter" exception
+      unloadFiles()
+        [32m✔[39m should reset referencesCleaned and allow for next run
+        [32m✔[39m should not be allowed when the current instance is already disposed
+      lazyLoadFiles()
+        [32m✔[39m should return the `Mocha` instance
+        when passed a non-`true` value
+          [32m✔[39m should enable eager loading
+        when passed `true`
+          [32m✔[39m should enable lazy loading
+    static method
+      unloadFile()
+        [32m✔[39m should unload a specific file from cache
+
+  parallel-buffered-runner
+    ParallelBufferedRunner
+      constructor
+        [32m✔[39m should start in "IDLE" state
+      instance property
+        _state
+          [32m✔[39m should disallow an invalid state transition
+      event
+        EVENT_RUN_END
+          [32m✔[39m should change the state to COMPLETE
+      instance method
+        run()
+          [32m✔[39m should be chainable
+          [32m✔[39m should emit `EVENT_RUN_BEGIN`
+          when instructed to link objects
+            [32m✔[39m should create object references
+            when event data object is missing an ID
+              [32m✔[39m should result in an uncaught exception
+          when a worker fails
+            [32m✔[39m should recover
+            [32m✔[39m should delegate to Runner#uncaught
+          when suite should bail
+            when no event contains an error
+              [32m✔[39m should not force-terminate
+            when an event contains an error and has positive failures
+              when subsequent files have not yet been run
+                [32m✔[39m should cleanly terminate the thread pool
+              when subsequent files already started running
+                [32m✔[39m should cleanly terminate the thread pool
+          when a suite has a bail flag
+            when no event contains an error
+              [32m✔[39m should not force-terminate
+            when an event contains an error and has positive failures
+              when subsequent files have not yet been run
+                [32m✔[39m should cleanly terminate the thread pool
+              when subsequent files already started running
+                [32m✔[39m should cleanly terminate the thread pool
+        linkPartialObjects()
+          [32m✔[39m should return the runner
+        isParallelMode()
+          [32m✔[39m should return true
+        workerReporter()
+          [32m✔[39m should return its context
+
+  ParallelBuffered
+    constructor
+      [32m✔[39m should listen for Runner events
+      [32m✔[39m should listen for Runner events expecting to occur once
+    event
+      on EVENT_RUN_END
+        [32m✔[39m should remove all listeners
+      on any other event listened for
+        [32m✔[39m should populate its `events` array with SerializableEvents
+    instance method
+      done
+        [32m✔[39m should execute its callback with a SerializableWorkerResult
+        [32m✔[39m should reset its `events` prop
+
+  serializer
+    function
+      serialize
+        when passed a non-object value
+          [32m✔[39m should return the value
+        when passed an object value
+          w/o a `serialize` method
+            [32m✔[39m should return the value
+          having a `serialize` method
+            [32m✔[39m should return the result of the `serialize` method
+        when not passed anything
+          [32m✔[39m should return `undefined`
+      deserialize
+        when passed nothing
+          [32m✔[39m should return `undefined`
+        when passed a non-object value
+          [32m✔[39m should return the value
+        when passed an object value which is not a SerializedWorkerResult
+          [32m✔[39m should return the value
+        when passed a SerializedWorkerResult object
+          [32m✔[39m should return the result of `SerializableWorkerResult.deserialize` called on the value
+    SerializableEvent
+      constructor
+        when called without `eventName`
+          [32m✔[39m should throw "invalid arg value" error
+        when called with a non-object `rawObject`
+          [32m✔[39m should throw "invalid arg type" error
+      instance method
+        serialize
+          [32m✔[39m should mutate the instance in-place
+          [32m✔[39m should freeze the instance
+          when passed an object with a `serialize` method
+            [32m✔[39m should call the `serialize` method
+          when passed an object containing an object with a `serialize` method
+            [32m✔[39m should call the `serialize` method
+          when passed an object containing a non-`serialize` method
+            [32m✔[39m should remove the method
+          when passed an object containing an array
+            [32m✔[39m should serialize the array
+          when passed an error
+            [32m✔[39m should serialize the error
+            [32m✔[39m should retain own props
+            [32m✔[39m should not retain not-own props
+          when passed an object containing a top-level prop with an Error value
+            [32m✔[39m should serialize the Error
+          when passed an object containing a nested prop with an Error value
+            [32m✔[39m should serialize the Error
+      static method
+        deserialize
+          [32m✔[39m should return a new object w/ null prototype
+          when passed a falsy parameter
+            [32m✔[39m should throw "invalid arg type" error
+          when passed value contains `data` prop
+            [32m✔[39m should ignore __proto__
+            when `data` prop contains a nested serialized Error prop
+              [32m✔[39m should create an Error instance from the nested serialized Error prop
+          when passed value contains an `error` prop
+            [32m✔[39m should create an Error instance from the prop
+          when passed value data contains a prop beginning with "$$"
+            [32m✔[39m should create a new prop having a function value
+            [32m✔[39m should create a new prop returning the original value
+            [32m✔[39m should remove the prop with the "$$" prefix
+          when the value data contains a prop with an array value
+            [32m✔[39m should deserialize each prop
+        create
+          [32m✔[39m should instantiate a SerializableEvent
+    SerializableWorkerResult
+      static method
+        create
+          [32m✔[39m should return a new SerializableWorkerResult instance
+        isSerializedWorkerResult
+          when passed an instance
+            [32m✔[39m should return `true`
+          when passed an object with an appropriate `__type` prop
+            [32m✔[39m should return `true`
+          when passed an object without an appropriate `__type` prop
+            [32m✔[39m should return `false`
+        deserialize
+          [32m✔[39m should call SerializableEvent#deserialize on each item in its `events` prop
+          [32m✔[39m should return the deserialized value
+      instance method
+        serialize
+          [32m✔[39m should return a read-only value
+          [32m✔[39m should call `SerializableEvent#serialize` of each of its events
+      constructor
+        [32m✔[39m should add a readonly `__type` prop
+
+  stackTraceFilter()
+    on node
+      on POSIX OS
+        [32m✔[39m should get a stack-trace as a string and prettify it
+        [32m✔[39m does not ignore other bower_components and components
+        [32m✔[39m should replace absolute with relative paths
+        [32m✔[39m should not replace absolute path which has cwd as infix
+      on Windows
+        - should work on Windows
+    on browser
+      [32m✔[39m does not strip out other bower_components
+
+  utils
+    function
+      cwd()
+        [32m✔[39m should return the current working directory
+      type()
+        [32m✔[39m should return "function" if the parameter is an async function
+        [32m✔[39m should return "error" if the parameter is an Error
+      canonicalType()
+        [32m✔[39m should return "buffer" if the parameter is a Buffer
+        [32m✔[39m should return "asyncfunction" if the parameter is an async function
+      isNumeric()
+        [32m✔[39m returns true for a number type
+        [32m✔[39m returns true for a string that can be parsed as a number
+        [32m✔[39m returns false for a string that cannot be parsed as a number
+        [32m✔[39m returns false for a string that only begins with a number
+        [32m✔[39m returns false for empty string
+        [32m✔[39m returns false for empty string with many whitespaces
+        [32m✔[39m returns true for stringified zero
+
+  worker
+    when run as main process
+      [32m✔[39m should throw
+    when run as worker process
+      [32m✔[39m should register itself with workerpool
+      function
+        run()
+          when called without arguments
+            [32m✔[39m should reject
+          when passed a non-string `options` value
+            [32m✔[39m should reject
+          when passed an invalid string `options` value
+            [32m✔[39m should reject
+          when called with empty "filepath" argument
+            [32m✔[39m should reject
+          when the file at "filepath" argument is unloadable
+            [32m✔[39m should reject
+          when the file at "filepath" is loadable
+            [32m✔[39m should handle "--require"
+            [32m✔[39m should handle "--ui"
+            [32m✔[39m should call Mocha#run
+            [32m✔[39m should remove all uncaughtException listeners
+            [32m✔[39m should remove all unhandledRejection listeners
+            when serialization succeeds
+              [32m✔[39m should resolve with a SerializedWorkerResult
+            when serialization fails
+              [32m✔[39m should reject
+            when run twice
+              [32m✔[39m should initialize only once
+
+
+  1291 passing (6s)
+  3 pending
+
+
+> mocha@12.0.3 test-coverage-generate
+> nyc report --reporter=lcov --reporter=text
+
+-------------------------------------|---------|----------|---------|---------|---------------------
+File                                 | % Stmts | % Branch | % Funcs | % Lines | Uncovered Line #s   
+-------------------------------------|---------|----------|---------|---------|---------------------
+All files                            |   48.56 |     41.5 |   39.57 |   53.66 |                     
+ candidate                           |       0 |        0 |       0 |       0 |                     
+  .wallaby.cjs                       |       0 |      100 |       0 |       0 | 3-49                
+  browser-entry.js                   |       0 |        0 |       0 |       0 | 10-216              
+  eslint.config.cjs                  |       0 |      100 |     100 |       0 | 3-14                
+  index.js                           |       0 |        0 |       0 |       0 |                     
+  mocha.mjs                          |       0 |      100 |       0 |       0 | 7-69                
+ candidate/bin                       |       0 |        0 |       0 |       0 |                     
+  mocha.js                           |       0 |        0 |       0 |       0 | 26-163              
+ candidate/lib                       |   57.39 |    47.92 |   47.34 |   62.08 |                     
+  context.js                         |   40.74 |    58.33 |   23.07 |      40 | 26,49,62-103        
+  error-constants.js                 |      75 |       75 |     100 |     100 | 1-119               
+  errors.js                          |   17.64 |    18.18 |    2.56 |   20.68 | ...-333,344-346,358 
+  hook.js                            |   35.29 |    41.17 |   11.11 |   33.33 | 15-52               
+  mocha.cjs                          |   98.04 |    88.88 |   98.61 |   98.04 | ...-372,623,866-867 
+  pending.js                         |      60 |       75 |   33.33 |      60 | 12-13               
+  plugin-loader.js                   |      50 |    29.78 |      50 |   50.66 | ...-244,251,265-266 
+  runnable.js                        |   45.85 |    25.21 |      25 |   52.56 | ...,378,390-429,465 
+  runner.js                          |   38.32 |    11.91 |   41.75 |   43.94 | ...9-1379,1392,1404 
+  stats-collector.js                 |      80 |    53.84 |      70 |   86.95 | 43,58,61            
+  suite.js                           |   43.61 |    25.92 |   22.97 |   47.08 | ...,607-610,626,658 
+  test.js                            |   48.57 |    44.44 |   30.76 |   51.61 | 19,50-83            
+  utils.cjs                          |   98.18 |    93.71 |     100 |   98.58 | 160,363,605         
+ candidate/lib/cli                   |   76.29 |    63.94 |   75.72 |   76.29 |                     
+  cli.js                             |       0 |        0 |       0 |       0 | 20-144              
+  collect-files.cjs                  |   95.45 |    76.92 |     100 |   95.45 | 57,78               
+  commands.js                        |       0 |        0 |       0 |       0 |                     
+  config.cjs                         |     100 |      100 |     100 |     100 |                     
+  index.cjs                          |       0 |      100 |     100 |       0 | 3                   
+  init.js                            |       0 |        0 |       0 |       0 | 11-35               
+  lookup-files.js                    |   34.04 |    31.03 |   22.22 |   34.78 | ...1,75-103,114-151 
+  node-flags.cjs                     |     100 |      100 |     100 |     100 |                     
+  one-and-dones.js                   |   35.29 |    53.84 |   14.28 |    37.5 | 19-38,52-59         
+  options.cjs                        |   96.87 |    90.69 |     100 |   96.87 | 97-98               
+  parse-args.js                      |   65.84 |    49.07 |   83.33 |   65.15 | ...,410-411,435,444 
+  run-helpers.cjs                    |   97.82 |    90.74 |     100 |    97.8 | 133,195             
+  run-option-metadata.cjs            |     100 |      100 |     100 |     100 |                     
+  run.cjs                            |     100 |      100 |     100 |     100 |                     
+  unparse-args.js                    |   16.66 |    26.08 |      10 |   15.38 | 4-26,30-35,39-48    
+  watch-run.cjs                      |   95.96 |    78.46 |   97.36 |   95.85 | ...,529,580,593,598 
+ candidate/lib/interfaces            |   31.28 |    34.57 |   18.51 |    31.7 |                     
+  bdd.js                             |   71.79 |    53.84 |      40 |   81.25 | 42,57,69,85,98,109  
+  common.js                          |   13.33 |    13.63 |    9.52 |   12.82 | 26,43-184           
+  exports.js                         |   18.75 |       40 |      20 |   14.81 | 22-54               
+  index.js                           |     100 |       75 |     100 |     100 | 1-4                 
+  qunit.js                           |   22.22 |    42.85 |    12.5 |      20 | 33-94               
+  tdd.js                             |   21.05 |    46.15 |   11.11 |   21.87 | 33-101              
+ candidate/lib/nodejs                |   66.75 |    54.49 |   59.15 |   66.94 |                     
+  buffered-worker-pool.js            |   95.83 |    91.66 |   88.88 |   95.83 | 87                  
+  esm-utils.cjs                      |    79.1 |    66.66 |    87.5 |   78.46 | 44-85,116,147,152   
+  file-unloader.js                   |   85.71 |       50 |     100 |   85.71 | 24                  
+  parallel-buffered-runner.js        |   90.69 |    88.63 |   90.47 |   90.69 | 252-267,358         
+  serializer.js                      |       0 |        0 |       0 |       0 | 18-396              
+  worker-core.js                     |     100 |     62.5 |     100 |     100 | 35-43,146           
+  worker.js                          |       0 |        0 |       0 |       0 |                     
+ candidate/lib/nodejs/reporters      |     100 |      100 |     100 |     100 |                     
+  parallel-buffered.js               |     100 |      100 |     100 |     100 |                     
+ candidate/lib/reporters             |   22.66 |    18.13 |    9.44 |   29.16 |                     
+  base.js                            |   19.53 |     8.22 |   11.36 |   24.68 | ...-647,661-664,683 
+  doc.js                             |   23.52 |       70 |   11.11 |   28.57 | 34-91               
+  dot.js                             |   26.66 |    46.15 |    12.5 |   34.28 | 35-72               
+  github-actions.js                  |   22.95 |    21.21 |    9.09 |      28 | 30-39,54,68,94-144  
+  html.js                            |   10.16 |     9.45 |     2.7 |   14.03 | ...,416-419,427-430 
+  index.cjs                          |     100 |      100 |     100 |     100 |                     
+  json-stream.js                     |   33.33 |       50 |    9.09 |   42.85 | 34-55,67,79         
+  json.js                            |   23.45 |    24.13 |    6.25 |   30.15 | ...,133-144,157-161 
+  landing.js                         |   24.63 |    46.15 |      10 |   32.69 | 55-106              
+  list.js                            |    32.6 |       75 |      10 |   46.87 | 38-69               
+  markdown.js                        |    17.8 |       50 |    6.25 |   22.41 | 40-108              
+  min.js                             |   47.36 |       75 |   16.66 |   64.28 | 35-44               
+  nyan.js                            |    8.33 |       15 |    3.22 |      11 | 34-258              
+  progress.js                        |      20 |    14.28 |   16.66 |   26.53 | 40-96               
+  spec.js                            |   65.45 |    63.63 |   61.53 |   85.36 | 59,64-65,77-82,87   
+  tap.js                             |   22.82 |    29.16 |    2.85 |   27.63 | ...-223,246-266,272 
+  xunit.js                           |   21.62 |     8.43 |    4.34 |   28.23 | ...,229-243,247-255 
+ candidate/lib/utils                 |   66.66 |       75 |   33.33 |   66.66 |                     
+  regexp.js                          |   66.66 |       75 |   33.33 |   66.66 | 11                  
+ candidate/test/integration/fixtures |     100 |      100 |     100 |     100 |                     
+  stack-trace.fixture.cjs            |     100 |      100 |     100 |     100 |                     
+-------------------------------------|---------|----------|---------|---------|---------------------

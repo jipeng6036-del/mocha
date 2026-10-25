@@ -1,0 +1,99 @@
+{
+  "node": "v22.18.0",
+  "chromium": "153.0.8010.12",
+  "bundle_sha256": "f173ce6aa6006d148af185967c6f800d49e42f563ccb653ee6b181e82eafaa33",
+  "original_code_units": [
+    84,
+    59,
+    32,
+    32,
+    53292,
+    45,
+    57214,
+    55726,
+    56611,
+    46,
+    8204,
+    55300,
+    56627,
+    55643,
+    57144,
+    55349,
+    57316,
+    59,
+    32,
+    32,
+    91,
+    80,
+    49,
+    32,
+    86,
+    54,
+    32,
+    67,
+    49,
+    93,
+    59,
+    32,
+    91,
+    80,
+    49,
+    32,
+    86,
+    54,
+    32,
+    86,
+    53,
+    32,
+    65,
+    51,
+    93
+  ],
+  "results": [
+    {
+      "mode": "plain",
+      "completed": true,
+      "errors": [],
+      "finished": true,
+      "executed": [
+        "IDNA ASCII before",
+        "IDNA plain middle",
+        "IDNA ASCII after"
+      ],
+      "observedFailures": [],
+      "stats": {
+        "passes": 3,
+        "failures": 0,
+        "tests": 3
+      },
+      "replays": [
+        "/plain?grep=%5EIDNA%20ASCII%20before%24",
+        "/plain?grep=%5EIDNA%20plain%20middle%24",
+        "/plain?grep=%5EIDNA%20ASCII%20after%24"
+      ]
+    },
+    {
+      "mode": "original",
+      "completed": false,
+      "errors": [],
+      "diagnostic": {
+        "name": "URIError",
+        "message": "URI malformed",
+        "stack": "URIError: URI malformed\n    at encodeURIComponent (<anonymous>)\n    at makeUrl (http://127.0.0.1:46439/mocha.js:12746:7)\n    at Base.testURL (http://127.0.0.1:46439/mocha.js:12704:14)\n    at eval (eval at evaluate (:311:30), <anonymous>:1:58)\n    at UtilityScript.evaluate (<anonymous>:313:16)\n    at UtilityScript.<anonymous> (<anonymous>:1:44)"
+      },
+      "finished": false,
+      "executed": [
+        "IDNA ASCII before"
+      ],
+      "observedFailures": [],
+      "stats": {
+        "passes": 2,
+        "failures": 0,
+        "tests": 1
+      },
+      "replays": [
+        "/original?grep=%5EIDNA%20ASCII%20before%24"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,107 @@
+{
+  "node": "v22.18.0",
+  "chromium": "153.0.8010.12",
+  "bundle_sha256": "6e61556665cf9dc4474fef793119c93c8b2e558a490ce48f5a16782d1067013a",
+  "original_code_units": [
+    84,
+    59,
+    32,
+    32,
+    53292,
+    45,
+    57214,
+    55726,
+    56611,
+    46,
+    8204,
+    55300,
+    56627,
+    55643,
+    57144,
+    55349,
+    57316,
+    59,
+    32,
+    32,
+    91,
+    80,
+    49,
+    32,
+    86,
+    54,
+    32,
+    67,
+    49,
+    93,
+    59,
+    32,
+    91,
+    80,
+    49,
+    32,
+    86,
+    54,
+    32,
+    86,
+    53,
+    32,
+    65,
+    51,
+    93
+  ],
+  "results": [
+    {
+      "mode": "plain",
+      "completed": true,
+      "errors": [],
+      "finished": true,
+      "executed": [
+        "IDNA ASCII before",
+        "IDNA plain middle",
+        "IDNA ASCII after"
+      ],
+      "observedFailures": [],
+      "stats": {
+        "passes": 3,
+        "failures": 0,
+        "tests": 3
+      },
+      "replays": [
+        "/plain?grep=%5EIDNA%20ASCII%20before%24",
+        "/plain?grep=%5EIDNA%20plain%20middle%24",
+        "/plain?grep=%5EIDNA%20ASCII%20after%24"
+      ]
+    },
+    {
+      "mode": "original",
+      "completed": true,
+      "errors": [],
+      "finished": true,
+      "executed": [
+        "IDNA ASCII before",
+        "IDNA T;  퀬-\udf7e񻤣.‌𑄳񦼸𝟤;  [P1 V6 C1]; [P1 V6 V5 A3]",
+        "IDNA ASCII after"
+      ],
+      "observedFailures": [],
+      "stats": {
+        "passes": 3,
+        "failures": 0,
+        "tests": 3
+      },
+      "replays": [
+        "/original?grep=%5EIDNA%20ASCII%20before%24",
+        "/original?grep=%5EIDNA%20T%3B%20%20%ED%80%AC%5Cx2d%5Cudf7e%F1%BB%A4%A3%5C.%E2%80%8C%F0%91%84%B3%F1%A6%BC%B8%F0%9D%9F%A4%3B%20%20%5C%5BP1%20V6%20C1%5C%5D%3B%20%5C%5BP1%20V6%20V5%20A3%5C%5D%24",
+        "/original?grep=%5EIDNA%20ASCII%20after%24"
+      ]
+    },
+    {
+      "mode": "replay",
+      "url": "http://127.0.0.1:41241/original?grep=%5EIDNA%20T%3B%20%20%ED%80%AC%5Cx2d%5Cudf7e%F1%BB%A4%A3%5C.%E2%80%8C%F0%91%84%B3%F1%A6%BC%B8%F0%9D%9F%A4%3B%20%20%5C%5BP1%20V6%20C1%5C%5D%3B%20%5C%5BP1%20V6%20V5%20A3%5C%5D%24",
+      "finished": true,
+      "executed": [
+        "IDNA T;  퀬-\udf7e񻤣.‌𑄳񦼸𝟤;  [P1 V6 C1]; [P1 V6 V5 A3]"
+      ],
+      "tests": 1
+    }
+  ]
+}

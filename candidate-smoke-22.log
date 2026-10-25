@@ -1,0 +1,14 @@
+node=v22.23.4
+command=["npm", "run", "test-smoke"]
+
+> mocha@12.0.3 test-smoke
+> node ./bin/mocha.js --no-config test/smoke/smoke.spec.cjs
+
+
+
+  a production installation of Mocha
+    [32m✔[39m should be able to execute a test
+
+
+  1 passing (4ms)
+

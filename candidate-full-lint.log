@@ -1,0 +1,67 @@
+cwd=/tmp/mocha1893/candidate
+uid=1000
+versions={"node": "v22.18.0", "npm": "11.20.0"}
+command=["npm", "run", "lint"]
+
+> mocha@12.0.3 prelint
+> npm run clean
+
+
+> mocha@12.0.3 clean
+> rimraf mocha.js mocha.js.map
+
+
+> mocha@12.0.3 lint
+> run-p --aggregate-output --continue-on-error lint:*
+
+npm warn reify Removing non-directory /tmp/mocha1893/candidate/docs/node_modules
+
+> mocha@12.0.3 lint:installed-check
+> installed-check --engine-check --ignore-dev
+
+npm warn EBADENGINE Unsupported engine {
+npm warn EBADENGINE   package: 'undici@8.10.0',
+npm warn EBADENGINE   required: { node: '>=22.19.0' },
+npm warn EBADENGINE   current: { node: 'v22.18.0', npm: '11.20.0' }
+npm warn EBADENGINE }
+output dir: /tmp/mocha-test-webpack
+Configuration hints (1)
+index.js!    .knip.jsonc  Remove redundant entry pattern
+
+> mocha@12.0.3 lint:knip
+> knip --cache
+
+
+> mocha@12.0.3 lint:code
+> eslint . --max-warnings 0
+
+npm warn install-scripts 1 package has install scripts not yet covered by allowScripts:
+npm warn install-scripts   esbuild@0.28.1 (postinstall: node install.js)
+npm warn install-scripts
+npm warn install-scripts Run `npm install-scripts ls` to review, or `npm install-scripts approve <pkg>` to allow.
+Configuration hints (1)
+.mdx    .knip.jsonc  Compiled extension excluded by project (imports not followed)
+
+> mocha@12.0.3 lint:knip-docs
+> cd docs && npm run lint:knip
+
+
+> docs@0.0.1 prelint:knip
+> npm install
+
+
+added 462 packages, and audited 463 packages in 10s
+
+221 packages are looking for funding
+  run `npm fund` for details
+
+22 vulnerabilities (1 low, 11 moderate, 10 high)
+
+To address all issues, run:
+  npm audit fix
+
+Run `npm audit` for details.
+
+> docs@0.0.1 lint:knip
+> knip --cache
+

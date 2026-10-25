@@ -1,0 +1,7 @@
+cwd=/tmp/mocha1893/candidate
+command=["node", "node_modules/@playwright/test/cli.js", "test", "test/browser/html-reporter.spec.js", "--retries=0"]
+
+Running 8 tests using 8 workers
+········
+  8 passed (3.4s)
+::notice title=🎭 Playwright Run Summary::  8 passed (3.4s)

@@ -1,0 +1,30 @@
+cwd=/tmp/mocha1893/candidate
+uid=1000
+versions={"node": "v22.18.0", "npm": "11.20.0"}
+command=["npm", "run", "test-browser"]
+
+> mocha@12.0.3 test-browser
+> run-s clean build test-browser:*
+
+
+> mocha@12.0.3 clean
+> rimraf mocha.js mocha.js.map
+
+
+> mocha@12.0.3 build
+> rollup -c ./rollup.config.js
+
+[36m
+[1m./browser-entry.js[22m → [1m./mocha.js[22m...[39m
+[1m[33m(!) Module "lib/context.js" tried to import "package.json" with "type": "json" attributes, but it was already imported elsewhere with no attributes. Please ensure that import attributes for the same module are always consistent.[39m[22m
+[32mcreated [1m./mocha.js[22m in [1m618ms[22m[39m
+
+> mocha@12.0.3 pretest-browser:playwright
+> playwright install chromium --with-deps
+
+Installing dependencies...
+Switching to root user to install dependencies...
+Password: su: Authentication failure
+Failed to install browsers
+Error: Installation process exited with code: 1
+ERROR: "test-browser:playwright" exited with 1.

@@ -1,0 +1,14 @@
+{
+  "command": [
+    "node",
+    "node_modules/@playwright/test/cli.js",
+    "test",
+    "test/browser/html-reporter.spec.js",
+    "--retries=0"
+  ],
+  "code": 1,
+  "seconds": 32.45,
+  "baselineHtmlSha256": "5da554bbb0983f761914aa8f8f7d8b82ce45d6a1e58bdb9c63ad5ebdc1d3785f",
+  "testSha256": "0b77df6cfd85c082b4af1b9dac4693db655f5911b0782b21e8400b836150e6dc",
+  "bundleSha256": "f173ce6aa6006d148af185967c6f800d49e42f563ccb653ee6b181e82eafaa33"
+}
